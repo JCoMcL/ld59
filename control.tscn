@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dkvlgaksdih5c"]
+
+[ext_resource type="Texture2D" uid="uid://b2pitm1dqf4m3" path="res://slct2026-04-18_114910.png" id="1_qtu10"]
+[ext_resource type="Texture2D" uid="uid://dn15g3n6bs88t" path="res://character.png" id="2_ee4bf"]
+[ext_resource type="Script" uid="uid://c23cgrmpjmrji" path="res://background_image.gd" id="2_kbped"]
+[ext_resource type="Script" uid="uid://d01pck3eq7tgb" path="res://character.gd" id="3_kbped"]
+[ext_resource type="Script" uid="uid://dmhx5kuub02rp" path="res://dialogue_panel.gd" id="5_kbped"]
+
+[node name="Root" type="Control" unique_id=226547074]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -3.580017
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1650041123]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1709.0
+offset_bottom = 1102.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qtu10")
+script = ExtResource("2_kbped")
+
+[node name="Character" type="TextureRect" parent="ColorRect" unique_id=1940024212]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 218.0
+offset_right = 577.0
+offset_bottom = 982.0
+texture = ExtResource("2_ee4bf")
+script = ExtResource("3_kbped")
+
+[node name="DialogueArea" type="Panel" parent="." unique_id=1804662132]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -201.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+script = ExtResource("5_kbped")
+height = 201
+
+[node name="Label" type="RichTextLabel" parent="DialogueArea" unique_id=466716973]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello There"
