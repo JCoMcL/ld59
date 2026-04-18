@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://stations/bench.gd" id="4_oobug"]
 [ext_resource type="Texture2D" uid="uid://dn15g3n6bs88t" path="res://characters/character.png" id="4_rtb34"]
 [ext_resource type="Script" uid="uid://d01pck3eq7tgb" path="res://characters/character.gd" id="5_h7l33"]
+[ext_resource type="Texture2D" uid="uid://bqha017spq743" path="res://characters/drunkard.png" id="9_ron4f"]
 
 [node name="Background" type="TextureRect" unique_id=2073133590]
 anchors_preset = 15
@@ -51,3 +52,4 @@ scale = Vector2(0.8537564, 0.8537564)
 texture = ExtResource("4_rtb34")
 script = ExtResource("5_h7l33")
 speaker_color = Color(0.23030767, 0.69813985, 0.59408265, 1)
+speaker_portrait = ExtResource("9_ron4f")

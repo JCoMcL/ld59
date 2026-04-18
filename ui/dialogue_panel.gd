@@ -8,8 +8,6 @@ extends Control
 
 @onready var timeline = $"ScrollContainer/VBoxContainer"
 
-signal response(code)
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = timeline.get_child_count() > 0
@@ -19,6 +17,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	size.x = min(width, get_parent().size.x * width_ratio)
 	position.x = get_parent().size.x - size.x
+
+func clear():
+	for c in timeline.get_children():
+		c.free()
+
+func set_speaker_portrait(tex:Texture2D):
+	if not tex:
+		return
+	%SpeakerPortrait.texture = tex
+	%SpeakerPortrait.position.x = -tex.get_size().x -10 
 
 const textbox_scn = preload("res://ui/textbox.tscn")
 func add_box(s:String) -> TextBox:
