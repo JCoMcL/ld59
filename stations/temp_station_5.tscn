@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d0fycwa5sl13p"]
+
+[ext_resource type="Texture2D" uid="uid://b2pitm1dqf4m3" path="res://stations/station_1.png" id="1_migbv"]
+[ext_resource type="Script" uid="uid://c23cgrmpjmrji" path="res://stations/background_image.gd" id="2_54yar"]
+[ext_resource type="Texture2D" uid="uid://ccv0tn0erryjl" path="res://stations/train.png" id="3_nfcl1"]
+[ext_resource type="Script" uid="uid://bjcndfpxnymj" path="res://stations/train.gd" id="4_6c45o"]
+[ext_resource type="Texture2D" uid="uid://dn15g3n6bs88t" path="res://characters/character.png" id="5_a73dx"]
+[ext_resource type="Script" uid="uid://d01pck3eq7tgb" path="res://characters/character.gd" id="6_dii0b"]
+
+[node name="Background" type="TextureRect" unique_id=2073133590]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 557.0
+offset_bottom = 454.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6740784, 0.6740784)
+texture = ExtResource("1_migbv")
+script = ExtResource("2_54yar")
+
+[node name="train" type="TextureRect" parent="." unique_id=626550440]
+layout_mode = 0
+offset_left = 344.1736
+offset_top = 170.6033
+offset_right = 1696.1736
+offset_bottom = 1900.6033
+scale = Vector2(0.4964078, 0.4964078)
+texture = ExtResource("3_nfcl1")
+script = ExtResource("4_6c45o")
+
+[node name="Character" type="TextureRect" parent="." unique_id=1217429750]
+layout_mode = 0
+offset_left = 250.68593
+offset_top = 355.03232
+offset_right = 696.6859
+offset_bottom = 1119.0323
+scale = Vector2(0.8537564, 0.8537564)
+texture = ExtResource("5_a73dx")
+script = ExtResource("6_dii0b")

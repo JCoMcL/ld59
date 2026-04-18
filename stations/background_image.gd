@@ -8,7 +8,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var p:Control = get_parent()
+	var p = get_parent()
+	if p is not Control:
+		return
 	if p:
 		var initial_size = texture.get_size()
 		if initial_size == Vector2.ZERO:
