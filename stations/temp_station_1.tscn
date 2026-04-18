@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b2pitm1dqf4m3" path="res://stations/station_1.png" id="1_bpsct"]
 [ext_resource type="Script" uid="uid://c23cgrmpjmrji" path="res://stations/background_image.gd" id="2_5l1d2"]
 [ext_resource type="Texture2D" uid="uid://ccv0tn0erryjl" path="res://stations/train.png" id="3_eys6e"]
+[ext_resource type="Texture2D" uid="uid://d2wx2v6jridfe" path="res://bench.png" id="3_xt3yd"]
 [ext_resource type="Script" uid="uid://bjcndfpxnymj" path="res://stations/train.gd" id="4_ni3nl"]
+[ext_resource type="Script" path="res://stations/bench.gd" id="4_oobug"]
 [ext_resource type="Texture2D" uid="uid://dn15g3n6bs88t" path="res://characters/character.png" id="4_rtb34"]
 [ext_resource type="Script" uid="uid://d01pck3eq7tgb" path="res://characters/character.gd" id="5_h7l33"]
 
@@ -19,6 +21,16 @@ scale = Vector2(0.6740784, 0.6740784)
 texture = ExtResource("1_bpsct")
 script = ExtResource("2_5l1d2")
 
+[node name="bench" type="TextureRect" parent="." unique_id=1258606337]
+layout_mode = 0
+offset_left = 57.856747
+offset_top = 440.05927
+offset_right = 706.35785
+offset_bottom = 1269.8721
+scale = Vector2(0.4964078, 0.4964078)
+texture = ExtResource("3_xt3yd")
+script = ExtResource("4_oobug")
+
 [node name="train" type="TextureRect" parent="." unique_id=626550440]
 layout_mode = 0
 offset_left = 344.1736
@@ -31,20 +43,11 @@ script = ExtResource("4_ni3nl")
 
 [node name="Character" type="TextureRect" parent="." unique_id=1217429750]
 layout_mode = 0
-offset_left = 250.68593
-offset_top = 355.03232
-offset_right = 696.6859
-offset_bottom = 1119.0323
+offset_left = 238.84462
+offset_top = 388.6788
+offset_right = 684.8446
+offset_bottom = 1152.6788
 scale = Vector2(0.8537564, 0.8537564)
 texture = ExtResource("4_rtb34")
 script = ExtResource("5_h7l33")
-
-[node name="bench" type="TextureRect" parent="." unique_id=1258606337]
-layout_mode = 0
-offset_left = 344.1736
-offset_top = 170.6033
-offset_right = 1696.1736
-offset_bottom = 1900.6033
-scale = Vector2(0.4964078, 0.4964078)
-texture = ExtResource("3_eys6e")
-script = ExtResource("4_ni3nl")
+speaker_color = Color(0.23030767, 0.69813985, 0.59408265, 1)

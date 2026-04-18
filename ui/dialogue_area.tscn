@@ -3,16 +3,18 @@
 [ext_resource type="Script" uid="uid://dmhx5kuub02rp" path="res://ui/dialogue_panel.gd" id="1_nn4bx"]
 
 [node name="DialogueArea" type="Control" unique_id=83460316]
+visible = false
 layout_mode = 3
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1378.0
-offset_right = 1712.0
+offset_left = -348.0
+offset_right = -14.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_vertical = 3
+mouse_filter = 2
 script = ExtResource("1_nn4bx")
 width = 334
 
@@ -23,8 +25,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=2077966980]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
