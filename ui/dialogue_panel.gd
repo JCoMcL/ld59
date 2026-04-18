@@ -1,20 +1,38 @@
 @tool
+class_name DialoguePanel
 extends Control
 
-@export var height = 200
-@export var height_ratio = 0.4
+@export var width = 200
+@export var width_ratio = 0.4
+@export var speaker_color: Color = Color.WHITE
 
+@onready var timeline = $"ScrollContainer/VBoxContainer"
+
+signal response(code)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	visible = false
+	visible = timeline.get_child_count() > 0
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	size.y = min(height, get_parent().size.y * height_ratio)
-	position.y = get_parent().size.y - size.y
+	size.x = min(width, get_parent().size.x * width_ratio)
+	position.x = get_parent().size.x - size.x
 
-func show_text(s:String):
+const textbox_scn = preload("res://ui/textbox.tscn")
+func add_box(s:String) -> TextBox:
 	visible = true
-	$Label.text = s
+	var tbox = textbox_scn.instantiate()
+	timeline.add_child(tbox)
+	tbox.text = s
+	return tbox
+
+func add_description_box(s:String) ->TextBox:
+	s = "[i]%s[/i]" % s
+	return add_box(s)
+
+func add_speech_box(s:String) -> TextBox:
+	s ="[color=#%s]%s[/color]" % [speaker_color.to_html(), s]
+	return add_box(s)
+	

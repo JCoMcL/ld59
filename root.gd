@@ -28,6 +28,12 @@ var timetable = generate_timetable()
 
 @onready var backdrop = $Background
 
+static func get_dialogue_panel(from: Node) -> DialoguePanel:
+	for c in get_root(from).get_children():
+		if c is DialoguePanel:
+			return c
+	return null
+
 static func get_root(from: Node) -> Root:
 	while from and from is not Root:
 		from = from.get_parent()

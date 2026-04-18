@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xo1qhcuxhn47" path="res://root.gd" id="1_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://bo8wpeovb82mm" path="res://stations/temp_station_1.tscn" id="2_28aoi"]
-[ext_resource type="Script" uid="uid://dmhx5kuub02rp" path="res://ui/dialogue_panel.gd" id="3_jnlp7"]
+[ext_resource type="PackedScene" uid="uid://cpi2hvhc0scgm" path="res://ui/dialogue_area.tscn" id="3_vvh5c"]
 
 [node name="Root" type="Control" unique_id=226547074]
 layout_mode = 3
@@ -23,28 +23,7 @@ offset_bottom = 1102.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="DialogueArea" type="Panel" parent="." unique_id=1804662132]
-unique_name_in_owner = true
-visible = false
+[node name="DialogueArea" parent="." unique_id=83460316 instance=ExtResource("3_vvh5c")]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -0.0049743652
-offset_top = -201.0
-offset_right = -0.0048828125
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_vertical = 3
-script = ExtResource("3_jnlp7")
-height = 201
-
-[node name="Label" type="RichTextLabel" parent="DialogueArea" unique_id=466716973]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Hello There"
+offset_left = -334.0
+offset_right = 0.0

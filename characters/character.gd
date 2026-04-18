@@ -1,15 +1,23 @@
 extends TextureRect
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var speaker_color:Color
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func open_dialogue():
+	var p = Root.get_dialogue_panel(self)
+	p.speaker_color = speaker_color
+	await p.add_description_box(
+"A murky old man rests against a cold brick. His face reminds you of an every single alcoholic
+human misfortune you ever saw. His teeth are pereodically clinging on an empty bottle of
+cheap beer in a desperate attempt to extract a nostalgic flavor. It feels like the bottle
+sucks his life out."
+	).done_showing
+	await p.add_description_box(
+"A torn-off voice is reaching you through his mouth, the rest of his body appears almost immobile."
+	).done_showing
+	await p.add_speech_box("Ah, what did [i]you[/i] do").done_showing
+
 
 func _gui_input(ev: InputEvent):
 	if ev is InputEventMouseButton and ev.pressed:
-		%DialogueArea.show_text("Hello there!!!!")
+		open_dialogue()
