@@ -19,6 +19,7 @@ var TRAINS = {
 
 var current_train = TRAINS.keys()[0]
 var current_station = SCENES.keys()[1]
+var timetable = generate_timetable()
 
 @onready var backdrop = $Background
 
@@ -37,7 +38,7 @@ func change_scene(id:StringName):
 	add_child(backdrop)
 	print("train: %s, station: %s" % [current_train, id])
 	print("other trains at station: %s" % ", ".join(get_other_trains(id)))
-	print("table of trains at station: %s" % ", ".join(sort_trains_randomly()))
+	print("table of trains at station: %s" % ", ".join(timetable))
 
 func get_trains(station_name:String) -> Array:
 	var trains = []
@@ -53,8 +54,14 @@ func get_other_trains(station:String) -> Array:
 			trains.append(train)
 	return trains
 
-func sort_trains_randomly():
+func generate_timetable():
 	var trains = get_other_trains(current_station)
 	trains.shuffle()
 	trains.insert(0, current_train)
 	return trains
+
+func wait_for_train():
+	current_train = timetable[1]
+	timetable = generate_timetable()
+	print("Waiting for train: %s" % current_train)
+	print("New timetable: %s" % ", ".join(timetable))

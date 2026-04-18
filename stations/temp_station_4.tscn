@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bo8wpeovb82mm" path="res://stations/temp_station_1.tscn" id="1_1ldqv"]
 [ext_resource type="Texture2D" uid="uid://b6riwyj2pjy3a" path="res://stations/kings cross.png" id="2_ytoeq"]
+[ext_resource type="Texture2D" uid="uid://biyc4huuglpgq" path="res://stations/bench.png" id="3_0j7oc"]
+[ext_resource type="Script" uid="uid://cejkgcurwhdjp" path="res://stations/bench.gd" id="4_f5861"]
 
 [node name="Background" unique_id=2073133590 instance=ExtResource("1_1ldqv")]
 texture = ExtResource("2_ytoeq")
@@ -18,3 +20,11 @@ offset_left = 1222.4099
 offset_top = 525.16144
 offset_right = 1668.4099
 offset_bottom = 1289.1614
+
+[node name="bench" parent="." index="2" unique_id=1258606337]
+offset_left = 885.6536
+offset_top = -65.2743
+offset_right = 2237.6538
+offset_bottom = 1664.7257
+texture = ExtResource("3_0j7oc")
+script = ExtResource("4_f5861")

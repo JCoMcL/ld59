@@ -38,3 +38,13 @@ offset_bottom = 1119.0323
 scale = Vector2(0.8537564, 0.8537564)
 texture = ExtResource("4_rtb34")
 script = ExtResource("5_h7l33")
+
+[node name="bench" type="TextureRect" parent="." unique_id=1258606337]
+layout_mode = 0
+offset_left = 344.1736
+offset_top = 170.6033
+offset_right = 1696.1736
+offset_bottom = 1900.6033
+scale = Vector2(0.4964078, 0.4964078)
+texture = ExtResource("3_eys6e")
+script = ExtResource("4_ni3nl")

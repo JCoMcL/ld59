@@ -2,8 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://bo8wpeovb82mm" path="res://stations/temp_station_1.tscn" id="1_7es7n"]
 [ext_resource type="Texture2D" uid="uid://b6riwyj2pjy3a" path="res://stations/kings cross.png" id="2_uc5n3"]
+[ext_resource type="Texture2D" uid="uid://biyc4huuglpgq" path="res://stations/bench.png" id="3_larfg"]
+[ext_resource type="Script" uid="uid://cejkgcurwhdjp" path="res://stations/bench.gd" id="4_y61ht"]
 
 [node name="Background" unique_id=2073133590 instance=ExtResource("1_7es7n")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1630.0
+offset_bottom = 1346.0
+grow_horizontal = 1
+grow_vertical = 1
 texture = ExtResource("2_uc5n3")
 
 [node name="train" parent="." index="0" unique_id=626550440]
@@ -18,3 +27,12 @@ offset_left = 1222.4099
 offset_top = 525.16144
 offset_right = 1668.4099
 offset_bottom = 1289.1614
+
+[node name="bench" parent="." index="2" unique_id=1258606337]
+offset_left = 998.40027
+offset_top = -305.60242
+offset_right = 2350.4004
+offset_bottom = 1424.3976
+rotation = 0.52658623
+texture = ExtResource("3_larfg")
+script = ExtResource("4_y61ht")
