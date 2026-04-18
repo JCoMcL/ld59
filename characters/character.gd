@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 func _gui_input(ev: InputEvent):
 	if ev is InputEventMouseButton and ev.pressed:
-		print(ev)
+		%DialogueArea.show_text("Hello there!!!!")

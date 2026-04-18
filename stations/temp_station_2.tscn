@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://byycq4hgiyv8m"]
+
+[ext_resource type="PackedScene" uid="uid://bo8wpeovb82mm" path="res://stations/temp_station_1.tscn" id="1_7es7n"]
+[ext_resource type="Texture2D" uid="uid://b6riwyj2pjy3a" path="res://stations/kings cross.png" id="2_uc5n3"]
+
+[node name="Background" unique_id=2073133590 instance=ExtResource("1_7es7n")]
+texture = ExtResource("2_uc5n3")
+
+[node name="train" parent="." index="0" unique_id=626550440]
+offset_left = 298.1849
+offset_top = 384.22833
+offset_right = 1650.1849
+offset_bottom = 2114.2283
+flip_h = true
+
+[node name="Character" parent="." index="1" unique_id=1217429750]
+offset_left = 1222.4099
+offset_top = 525.16144
+offset_right = 1668.4099
+offset_bottom = 1289.1614

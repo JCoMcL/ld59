@@ -1,4 +1,3 @@
-@tool
 extends TextureRect
 
 
@@ -10,3 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _gui_input(ev: InputEvent):
+	if ev is InputEventMouseButton and ev.pressed:
+		Root.get_root(self).change_scene("2")

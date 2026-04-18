@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2pitm1dqf4m3"
-path="res://.godot/imported/slct2026-04-18_114910.png-855cebed5c02e43edd5d45dd506eb1ca.ctex"
+uid="uid://cx3yjclf77mfx"
+path="res://.godot/imported/interior.jpg-b29a472ac5a1bee13f8056c3cdfd563d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slct2026-04-18_114910.png"
-dest_files=["res://.godot/imported/slct2026-04-18_114910.png-855cebed5c02e43edd5d45dd506eb1ca.ctex"]
+source_file="res://interior.jpg"
+dest_files=["res://.godot/imported/interior.jpg-b29a472ac5a1bee13f8056c3cdfd563d.ctex"]
 
 [params]
 
