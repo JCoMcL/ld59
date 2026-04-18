@@ -17,6 +17,11 @@ var TRAINS = {
 	&"train4": ["4", "5"]
 }
 
+#UI
+var inventory := [] # Array of {name, image}
+var inventory_panel: InventoryPanel = null
+var inventory_button = null
+#Gameplay
 var current_train = TRAINS.keys()[0]
 var current_station = SCENES.keys()[1]
 var timetable = generate_timetable()
@@ -28,6 +33,15 @@ static func get_root(from: Node) -> Root:
 		from = from.get_parent()
 	return from
 
+func _ready():	
+	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
+	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
+	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
+	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
+
+	create_inventory_panel()
+	create_inventory_button()
+
 func change_scene(id:StringName):
 	assert(SCENES.has(id))
 	if SCENES[id] is PackedScene:
@@ -36,9 +50,39 @@ func change_scene(id:StringName):
 	remove_child(backdrop)
 	backdrop = SCENES[id]
 	add_child(backdrop)
+	backdrop.z_index = -1
 	print("train: %s, station: %s" % [current_train, id])
 	print("other trains at station: %s" % ", ".join(get_other_trains(id)))
 	print("table of trains at station: %s" % ", ".join(timetable))
+	create_inventory_panel()
+	create_inventory_button()
+
+func create_inventory_button():
+	var inventory_button_scene := preload("res://ui/inventory_button.tscn")
+	inventory_button = inventory_button_scene.instantiate()
+	add_child(inventory_button)
+	inventory_button.pressed.connect(_on_inventory_button_pressed)
+	inventory_panel.visible = false
+
+func add_item_to_inventory(item_name: String, image: Texture):
+	inventory.append({"name": item_name, "image": image})
+
+func create_inventory_panel():
+	if inventory_panel == null:
+		var inventory_panel_scene = preload("res://ui/inventory_panel.tscn")
+		inventory_panel = inventory_panel_scene.instantiate()
+		add_child(inventory_panel)
+		inventory_panel.visible = false
+	inventory_panel.create_inventory_panel(inventory)
+	show_inventory_panel()
+
+	
+func show_inventory_panel():
+	inventory_panel.visible = true
+
+func _on_inventory_button_pressed():
+	inventory_panel.visible = not inventory_panel.visible
+
 
 func get_trains(station_name:String) -> Array:
 	var trains = []
