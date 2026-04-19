@@ -53,6 +53,8 @@ func change_scene(id:StringName):
 	if SCENES[id] is PackedScene:
 		SCENES[id] = SCENES[id].instantiate()
 	assert(SCENES[id] is Node)
+	await %Curtain.close(Curtain.RIGHT)
+	await get_tree().create_timer(0.3).timeout
 	remove_child(backdrop)
 	backdrop = SCENES[id]
 	add_child(backdrop)
@@ -62,6 +64,7 @@ func change_scene(id:StringName):
 	print("table of trains at station: %s" % ", ".join(timetable))
 	create_inventory_panel()
 	create_inventory_button()
+	%Curtain.open(Curtain.RIGHT)
 
 func create_inventory_button():
 	var inventory_button_scene := preload("res://ui/inventory_button.tscn")

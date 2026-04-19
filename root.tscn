@@ -5,12 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://bo8wpeovb82mm" path="res://stations/temp_station_1.tscn" id="2_28aoi"]
 [ext_resource type="PackedScene" uid="uid://cpi2hvhc0scgm" path="res://ui/dialogue_area.tscn" id="3_vvh5c"]
 [ext_resource type="Script" uid="uid://d02wvqklknmxh" path="res://sfx.gd" id="5_jnlp7"]
+[ext_resource type="Script" uid="uid://dxkjoubkptxjv" path="res://curtain.gd" id="7_bf3um"]
 [ext_resource type="Shader" uid="uid://co6kvvgykv4av" path="res://curtain.gdshader" id="7_vyht1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bf3um"]
 shader = ExtResource("7_vyht1")
-shader_parameter/factor = 0.82000003895
+shader_parameter/factor = 0.0
 shader_parameter/wave_size = 50.0
+shader_parameter/direction = 0
 
 [node name="Root" type="Control" unique_id=226547074]
 layout_mode = 3
@@ -44,14 +46,14 @@ unique_name_in_owner = true
 script = ExtResource("5_jnlp7")
 
 [node name="Curtain" type="ColorRect" parent="." unique_id=1895611684]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_bf3um")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.004615072, 0.0031466596, 0.0031467292, 1)
+script = ExtResource("7_bf3um")
