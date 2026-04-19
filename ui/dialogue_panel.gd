@@ -29,16 +29,16 @@ func set_speaker_portrait(tex:Texture2D):
 	%SpeakerPortrait.position.x = -tex.get_size().x -10 
 
 const textbox_scn = preload("res://ui/textbox.tscn")
-func add_box(s:String) -> TextBox:
+const descbox_scn = preload("res://ui/textbox_description.tscn")
+func add_box(s:String, scn:PackedScene=textbox_scn) -> TextBox:
 	visible = true
-	var tbox = textbox_scn.instantiate()
+	var tbox = scn.instantiate()
 	timeline.add_child(tbox)
 	tbox.text = s
 	return tbox
 
 func add_description_box(s:String) ->TextBox:
-	s = "[i]%s[/i]" % s
-	return add_box(s)
+	return add_box(s, descbox_scn)
 
 func add_speech_box(s:String) -> TextBox:
 	s ="[color=#%s]%s[/color]" % [speaker_color.to_html(), s]

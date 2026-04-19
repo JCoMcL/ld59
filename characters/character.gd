@@ -5,7 +5,6 @@ extends TextureRect
 
 func open_dialogue():
 	var p = Root.get_dialogue_panel(self)
-	print(p)
 	p.clear()
 	p.speaker_color = speaker_color
 	p.set_speaker_portrait(speaker_portrait)

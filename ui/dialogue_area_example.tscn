@@ -16,36 +16,40 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="DialogueArea" type="Control" unique_id=540212953]
-layout_mode = 3
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1378.0
-offset_right = 1712.0
-grow_horizontal = 0
-grow_vertical = 2
-size_flags_vertical = 3
-script = ExtResource("1_lh0pv")
-width = 334
-
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=330724954]
-layout_mode = 1
+[node name="DialogueArea" type="HSplitContainer" unique_id=560039411]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1770694838]
+[node name="Panel" type="Panel" parent="." unique_id=2105981470]
+layout_mode = 2
+
+[node name="DialoguePanel" type="Control" parent="." unique_id=1289617174]
+layout_mode = 2
+script = ExtResource("1_lh0pv")
+metadata/_custom_type_script = "uid://dmhx5kuub02rp"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DialoguePanel" unique_id=330724954]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.40002
+offset_right = -200.40002
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialoguePanel/ScrollContainer" unique_id=1770694838]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="DescriptionPanel" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=416844985]
-custom_minimum_size = Vector2(0, 184)
+[node name="DescriptionPanel" type="PanelContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer" unique_id=416844985]
+custom_minimum_size = Vector2(0, 322)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.75
@@ -53,19 +57,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_huihk")
 script = ExtResource("2_hexdv")
 text = "A murky old man rests against a cold brick. His face reminds you of an every single alcoholichuman misfortune you ever saw. His teeth are pereodically clinging on an empty bottle ofcheap beer in a desperate attempt to extract a nostalgic flavor. It feels like the bottlesucks his life out."
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/DescriptionPanel" unique_id=559276908]
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer/DescriptionPanel" unique_id=559276908]
 layout_mode = 2
 
-[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/DescriptionPanel/MarginContainer" unique_id=115770810]
+[node name="Label" type="RichTextLabel" parent="DialoguePanel/ScrollContainer/VBoxContainer/DescriptionPanel/MarginContainer" unique_id=115770810]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/default_color = Color(0.6955031, 0.6955032, 0.6955029, 1)
 bbcode_enabled = true
 text = "A murky old man rests against a cold brick. His face reminds you of an every single alcoholichuman misfortune you ever saw. His teeth are pereodically clinging on an empty bottle ofcheap beer in a desperate attempt to extract a nostalgic flavor. It feels like the bottlesucks his life out."
 fit_content = true
+visible_characters = 289
 
-[node name="DescriptionPanel2" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=2011727386]
-custom_minimum_size = Vector2(0, 69)
+[node name="DescriptionPanel2" type="PanelContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer" unique_id=2011727386]
+custom_minimum_size = Vector2(0, 115)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.75
@@ -73,18 +78,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_huihk")
 script = ExtResource("2_hexdv")
 text = "A torn-off voice is reaching you through his mouth, the rest of his body appears almost immobile."
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/DescriptionPanel2" unique_id=900029914]
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer/DescriptionPanel2" unique_id=900029914]
 layout_mode = 2
 
-[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/DescriptionPanel2/MarginContainer" unique_id=1622387970]
+[node name="Label" type="RichTextLabel" parent="DialoguePanel/ScrollContainer/VBoxContainer/DescriptionPanel2/MarginContainer" unique_id=1622387970]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/default_color = Color(0.6955031, 0.6955032, 0.6955029, 1)
 bbcode_enabled = true
 text = "A torn-off voice is reaching you through his mouth, the rest of his body appears almost immobile."
 fit_content = true
+visible_characters = 97
 
-[node name="SpeechPanel" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=969724506]
+[node name="SpeechPanel" type="PanelContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer" unique_id=969724506]
 custom_minimum_size = Vector2(0, 23)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -92,21 +98,23 @@ size_flags_stretch_ratio = 4.75
 script = ExtResource("2_hexdv")
 text = "Ah, what did [i]you[/i] do?"
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/SpeechPanel" unique_id=1266425981]
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer/SpeechPanel" unique_id=1266425981]
 layout_mode = 2
 
-[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/SpeechPanel/MarginContainer" unique_id=1646828510]
+[node name="Label" type="RichTextLabel" parent="DialoguePanel/ScrollContainer/VBoxContainer/SpeechPanel/MarginContainer" unique_id=1646828510]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/default_color = Color(0.38851032, 0.8393217, 0.73346907, 1)
 bbcode_enabled = true
 text = "Ah, what did [i]you[/i] do?"
 fit_content = true
+visible_characters = 27
+visible_ratio = 1.35
 
-[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer" unique_id=1268081328]
+[node name="HSeparator" type="HSeparator" parent="DialoguePanel/ScrollContainer/VBoxContainer" unique_id=1268081328]
 layout_mode = 2
 
-[node name="Panel4" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1832419104]
+[node name="Panel4" type="PanelContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer" unique_id=1832419104]
 custom_minimum_size = Vector2(0, 23)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -114,17 +122,18 @@ size_flags_stretch_ratio = 4.75
 script = ExtResource("2_hexdv")
 text = "I fell asleep."
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Panel4" unique_id=1307017079]
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer/Panel4" unique_id=1307017079]
 layout_mode = 2
 
-[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/Panel4/MarginContainer" unique_id=1161101294]
+[node name="Label" type="RichTextLabel" parent="DialoguePanel/ScrollContainer/VBoxContainer/Panel4/MarginContainer" unique_id=1161101294]
 layout_mode = 2
 size_flags_vertical = 0
 bbcode_enabled = true
 text = "I fell asleep."
 fit_content = true
+visible_characters = 14
 
-[node name="Panel5" type="PanelContainer" parent="ScrollContainer/VBoxContainer" unique_id=1306532567]
+[node name="Panel5" type="PanelContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer" unique_id=1306532567]
 custom_minimum_size = Vector2(0, 23)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -132,20 +141,21 @@ size_flags_stretch_ratio = 4.75
 script = ExtResource("2_hexdv")
 text = "Something terrible."
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/Panel5" unique_id=267807919]
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePanel/ScrollContainer/VBoxContainer/Panel5" unique_id=267807919]
 layout_mode = 2
 
-[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/Panel5/MarginContainer" unique_id=1676402514]
+[node name="Label" type="RichTextLabel" parent="DialoguePanel/ScrollContainer/VBoxContainer/Panel5/MarginContainer" unique_id=1676402514]
 layout_mode = 2
 size_flags_vertical = 0
 bbcode_enabled = true
 text = "Something terrible."
 fit_content = true
+visible_characters = 19
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1175042223]
+[node name="TextureRect" type="TextureRect" parent="DialoguePanel" unique_id=1175042223]
 layout_mode = 0
-offset_left = -197.0
+offset_left = -397.40002
 offset_top = 5.0
-offset_right = -5.0
+offset_right = -205.40002
 offset_bottom = 261.0
 texture = ExtResource("3_ai3a2")

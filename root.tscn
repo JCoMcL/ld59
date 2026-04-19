@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dkvlgaksdih5c"]
 
-[ext_resource type="FontFile" uid="uid://0x8drqanqte4" path="res://ui/fonts/SpecialElite.ttf" id="1_28aoi"]
+[ext_resource type="Theme" uid="uid://don7xmg8ku1s5" path="res://ui/theme.tres" id="1_l8v81"]
 [ext_resource type="Script" uid="uid://xo1qhcuxhn47" path="res://root.gd" id="1_vvh5c"]
 [ext_resource type="PackedScene" uid="uid://bo8wpeovb82mm" path="res://stations/temp_station_1.tscn" id="2_28aoi"]
 [ext_resource type="PackedScene" uid="uid://cpi2hvhc0scgm" path="res://ui/dialogue_area.tscn" id="3_vvh5c"]
+[ext_resource type="Script" uid="uid://d02wvqklknmxh" path="res://sfx.gd" id="5_jnlp7"]
+[ext_resource type="Shader" uid="uid://co6kvvgykv4av" path="res://curtain.gdshader" id="7_vyht1"]
 
-[sub_resource type="Theme" id="Theme_vvh5c"]
-default_font = ExtResource("1_28aoi")
-MarginContainer/constants/margin_bottom = 4
-MarginContainer/constants/margin_left = 11
-MarginContainer/constants/margin_right = 11
-MarginContainer/constants/margin_top = 7
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bf3um"]
+shader = ExtResource("7_vyht1")
+shader_parameter/factor = 0.82000003895
+shader_parameter/wave_size = 50.0
 
 [node name="Root" type="Control" unique_id=226547074]
 layout_mode = 3
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_vvh5c")
+theme = ExtResource("1_l8v81")
 script = ExtResource("1_vvh5c")
 
 [node name="Background" parent="." unique_id=2073133590 instance=ExtResource("2_28aoi")]
@@ -38,3 +38,20 @@ layout_mode = 1
 offset_left = -334.0
 offset_right = 0.0
 speaker_color = Color(1, 1, 1, 1)
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=124380338]
+unique_name_in_owner = true
+script = ExtResource("5_jnlp7")
+
+[node name="Curtain" type="ColorRect" parent="." unique_id=1895611684]
+material = SubResource("ShaderMaterial_bf3um")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.004615072, 0.0031466596, 0.0031467292, 1)

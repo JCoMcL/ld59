@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cufd2gotfi36k"]
+
+[ext_resource type="PackedScene" uid="uid://y3ri0ivk8tb2" path="res://ui/textbox.tscn" id="1_v34jb"]
+[ext_resource type="FontFile" uid="uid://cmykqd885ct5s" path="res://ui/fonts/Playfair/Playfair-Italic-VariableFont_opsz,wdth,wght.ttf" id="2_dxs50"]
+
+[node name="Panel" unique_id=95958961 instance=ExtResource("1_v34jb")]
+
+[node name="MarginContainer" parent="." index="0" unique_id=146551870]
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 21
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" parent="MarginContainer" index="0" unique_id=504184787]
+theme_override_colors/default_color = Color(0.8992584, 0.8992584, 0.8992584, 1)
+theme_override_fonts/normal_font = ExtResource("2_dxs50")

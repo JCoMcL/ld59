@@ -1,7 +1,14 @@
 [gd_resource type="Theme" format=3 uid="uid://don7xmg8ku1s5"]
 
+[ext_resource type="FontFile" uid="uid://8f3uq1s1r55h" path="res://ui/fonts/Texturina/Texturina-Italic-VariableFont_opsz,wght.ttf" id="1_jf26r"]
+[ext_resource type="FontFile" uid="uid://bb7ng4fa1unao" path="res://ui/fonts/Texturina/Texturina-VariableFont_opsz,wght.ttf" id="2_6lx7k"]
+
 [resource]
+default_font = ExtResource("2_6lx7k")
+default_font_size = 19
 MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 11
 MarginContainer/constants/margin_right = 11
-MarginContainer/constants/margin_top = 4
+MarginContainer/constants/margin_top = 7
+RichTextLabel/fonts/italics_font = ExtResource("1_jf26r")
+RichTextLabel/fonts/normal_font = ExtResource("2_6lx7k")
