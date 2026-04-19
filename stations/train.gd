@@ -23,4 +23,6 @@ func _gui_input(ev: InputEvent):
 			root.current_station = next_station
 			root.change_scene(next_station)
 		else:
-			print("End of the line or station not found in route.")
+			print("End of the line or station not found in route. Returning to first station.")
+			root.current_station = route[0]
+			root.change_scene(route[0])
