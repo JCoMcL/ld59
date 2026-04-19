@@ -29,7 +29,10 @@ func set_speaker_portrait(tex:Texture2D):
 	%SpeakerPortrait.position.x = -tex.get_size().x -10 
 
 const textbox_scn = preload("res://ui/textbox.tscn")
+const button_scn = preload("res://ui/textbox_answer.tscn")
 const descbox_scn = preload("res://ui/textbox_description.tscn")
+const questionbox_scn = preload("res://ui/textbox_question.tscn")
+
 func add_box(s:String, scn:PackedScene=textbox_scn) -> TextBox:
 	visible = true
 	var tbox = scn.instantiate()
@@ -37,10 +40,28 @@ func add_box(s:String, scn:PackedScene=textbox_scn) -> TextBox:
 	tbox.text = s
 	return tbox
 
+func add_button(id, s:String) -> Button:
+	var btn = button_scn.instantiate()
+	btn.text = s
+	timeline.add_child(btn)
+	btn.pressed.connect(_on_answer_pressed.emit.bind(id),CONNECT_ONE_SHOT)
+	return btn
+
 func add_description_box(s:String) ->TextBox:
 	return add_box(s, descbox_scn)
 
 func add_speech_box(s:String) -> TextBox:
 	s ="[color=#%s]%s[/color]" % [speaker_color.to_html(), s]
 	return add_box(s)
+
+func add_question_box(answers:Dictionary, scn:PackedScene=questionbox_scn) -> String:
+	var qbox = scn.instantiate()
+	timeline.add_child(qbox)
+	var vbox = qbox.get_node("VBoxContainer")
+	for a in answers.keys():
+		var answer = add_button(a, answers[a])
+		vbox.reparent(qbox)
+
+	return await _on_answer_pressed
 	
+signal _on_answer_pressed(answer_id)

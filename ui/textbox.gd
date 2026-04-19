@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 		text_reveal_cumer.add(delta * rate)
 		sfx_cumer.add(delta * rate)
 		get_label().visible_characters = text_reveal_cumer.i
-		if get_label().visible_characters >= text.length():
+		if get_label().visible_characters >= plain_text.length():
 			done_showing.emit()
 
 
