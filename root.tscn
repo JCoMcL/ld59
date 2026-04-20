@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://dxkjoubkptxjv" path="res://curtain.gd" id="7_bf3um"]
 [ext_resource type="Shader" uid="uid://co6kvvgykv4av" path="res://curtain.gdshader" id="7_vyht1"]
 [ext_resource type="PackedScene" uid="uid://dkiv1yd2of2dc" path="res://stations/station_1.tscn" id="8_bf3um"]
+[ext_resource type="AudioStream" uid="uid://dgtr8llofy4lk" path="res://audio/prelim_soundtrack.ogg" id="10_tw3kd"]
+[ext_resource type="Script" uid="uid://bt6uh0amcq3n4" path="res://fade_in.gd" id="11_gd4vy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bf3um"]
 shader = ExtResource("7_vyht1")
@@ -77,3 +79,10 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.004615072, 0.0031466596, 0.0031467292, 1)
 script = ExtResource("7_bf3um")
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=917386525]
+unique_name_in_owner = true
+stream = ExtResource("10_tw3kd")
+autoplay = true
+bus = &"Music"
+script = ExtResource("11_gd4vy")
