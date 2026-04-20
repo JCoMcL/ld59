@@ -9,7 +9,6 @@ func open_dialogue():
 	p.speaker_color = speaker_color
 	p.set_speaker_portrait(speaker_portrait)
 	p.visible = true
-		
 	await p.add_description_box(
 "A big-cash class unit is staring at you with an opportunistic spark in his eye. An imprint of a smile that exposes his gold teeth is stuck with him forever."
 	).done_showing
@@ -63,7 +62,7 @@ func open_dialogue():
 	})	
 	await p.add_speech_box("- Oh, don't problem. Everyone has something precious. Have you met my good friend Wellington? I got his beer.").done_showing
 	await p.add_description_box(
-"Tim slaps a pocket on his suit full of liquid. A small droplet of it jumps out of the pocket."
+"Tim slaps a pocket on his suit full of liquid. A small droplet of it jumps out."
 	).done_showing 
 	await p.add_speech_box("As for you, young gentleman, I see a shiny necklace. No real value, but for the love of the trade, I will give off a full bar of gold for your cheap piece of metal.").done_showing
 	await p.add_description_box("The necklace feels especially cold on your chest. You take it in your arm to investigate it but realize it was not its physical sensation that made you feel cold, but something else troubling you.").done_showing
@@ -89,8 +88,13 @@ func open_dialogue():
 	})	
 
 	if answer == "1":
+		Root.remove_from_inventory("Locket")
+		Root.add_item_to_inventory("Fake Gold", preload("res://ui/gold.png"))
+		var root = Root.get_root(self)
+		root.create_inventory_panel()
 		await p.add_description_box("The necklace is gone. It is a part of you no longer. A very light piece of yellow metal appears in your arms. You hit it gently with your fist, and an echo is heard from within the encasement. It is hollow.").done_showing
 		await p.add_description_box("You lift your eyes to find Tim, but he is no longer here. You can not do anything about it. A deal is a deal.").done_showing
+
 	elif answer == "2":
 		await p.add_speech_box("A shame to say the least; I hoped you would be a bit more open-minded and, frankly, a bit more intelligent.").done_showing
 		await p.add_description_box("Tim walks off. He walks down the station but does so for a very long time until his silhouette almost disappears from on the horizon.").done_showing

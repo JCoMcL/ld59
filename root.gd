@@ -18,7 +18,7 @@ var TRAINS = {
 }
 
 #UI
-var inventory := [] # Array of {name, image}
+static var inventory := [] # Array of {name, image}
 var inventory_panel: InventoryPanel = null
 var inventory_button = null
 #Gameplay
@@ -34,6 +34,15 @@ static func get_dialogue_panel(from: Node) -> DialoguePanel:
 			return c
 	return null
 
+static func remove_from_inventory(item_name: String):
+	for i in inventory.size():
+		print("checking %s against %s" % [inventory[i]["name"], item_name])
+		if inventory[i-1]["name"] == item_name:
+			inventory.remove_at(i-1)
+
+static func add_item_to_inventory(item_name: String, image: Texture):
+	inventory.append({"name": item_name, "image": image})
+	
 static func get_root(from: Node) -> Root:
 	while from and from is not Root:
 		from = from.get_parent()
@@ -42,7 +51,6 @@ static func get_root(from: Node) -> Root:
 func _ready():	
 	inventory.append({"name": "Love Letter", "image": preload("res://ui/loveletter.png")})
 	inventory.append({"name": "Locket", "image": preload("res://ui/locket.png")})
-	inventory.append({"name": "Fake Gold", "image": preload("res://ui/gold.png")})
 	create_inventory_panel()
 	create_inventory_button()
 
@@ -71,9 +79,6 @@ func create_inventory_button():
 	add_child(inventory_button)
 	inventory_button.pressed.connect(_on_inventory_button_pressed)
 	inventory_panel.visible = false
-
-func add_item_to_inventory(item_name: String, image: Texture):
-	inventory.append({"name": item_name, "image": image})
 
 func create_inventory_panel():
 	if inventory_panel == null:
