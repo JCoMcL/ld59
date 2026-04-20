@@ -12,8 +12,6 @@ var SCENES = {
 
 var TRAINS = {
 	&"train1": ["1", "2", "3", "4"],
-	&"train2": ["1", "2", "3", "4"],
-	&"train3": ["1", "2", "3", "4"],
 	&"train4": ["4", "5"]
 }
 
@@ -136,9 +134,7 @@ func generate_timetable():
 func wait_for_train():
 	await %Curtain.close(%Curtain.DOWN)
 	SFXPlayer.get_sfx_player(self).play_sfx("train")	
-	current_train = timetable[1]
-	timetable = generate_timetable()
-	print("Waiting for train: %s" % current_train)
-	print("New timetable: %s" % ", ".join(timetable))
+	if get_other_trains(current_station).size() > 0:
+		current_train = get_other_trains(current_station)[0]
 	await get_tree().create_timer(3.0).timeout
 	await %Curtain.open(%Curtain.UP)

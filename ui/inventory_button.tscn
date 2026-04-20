@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5nr0nl6kbfyb"]
 
-[ext_resource type="Texture2D" uid="uid://rs7bgqalhpbl" path="res://ui/inventory.png" id="1_n6hhf"]
+[ext_resource type="Texture2D" uid="uid://bwl1ltme3ysda" path="res://ui/inventoryicon.png" id="1_n6hhf"]
 
 [node name="InventoryButton" type="Button" unique_id=588751978]
 offset_right = 157.0
