@@ -1,7 +1,4 @@
-extends Control
-
-@export var speaker_color:Color
-@export var speaker_portrait:Texture2D
+extends Character
 
 func open_dialogue():
 	var p = Root.get_dialogue_panel(self)
@@ -69,26 +66,3 @@ func open_dialogue():
 	})
 	if answer == "1":
 		await fade_and_remove()
-
-func fade_and_remove():
-	var sprite = get_node_or_null("../Sprite3D")
-	if sprite:
-		var tween = create_tween()
-		tween.tween_property(sprite, "modulate:a", 0.0, 1.0)
-		tween.tween_callback(Callable(self, "_on_fade_out_finished"))
-	else:
-		# fallback: fade out self
-		var tween = create_tween()
-		tween.tween_property(self, "modulate:a", 0.0, 1.0)
-		tween.tween_callback(Callable(self, "_on_fade_out_finished"))
-
-func _on_fade_out_finished():
-	var p = Root.get_dialogue_panel(self)
-	if p:
-		p.queue_free()
-	queue_free()
-
-
-func _gui_input(ev: InputEvent):
-	if ev is InputEventMouseButton and ev.pressed:
-		open_dialogue()

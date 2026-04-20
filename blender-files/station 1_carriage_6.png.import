@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvtl6hfgyftxu"
-path.s3tc="res://.godot/imported/station 1_carriage.png-4a641a38906fa2bc538c19d69eaa4ab7.s3tc.ctex"
+uid="uid://cs30cboi1p6i5"
+path.s3tc="res://.godot/imported/station 1_carriage_6.png-95df97198c9f1b75413cee8087c7e1e1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "b01a62f0ec72f06d38c4f185916f8a2a"
+"md5": "fc08d39f0605e4d6860f92d281685a72"
 }
 
 [deps]
 
-source_file="res://blender-files/station 1_carriage.png"
-dest_files=["res://.godot/imported/station 1_carriage.png-4a641a38906fa2bc538c19d69eaa4ab7.s3tc.ctex"]
+source_file="res://blender-files/station 1_carriage_6.png"
+dest_files=["res://.godot/imported/station 1_carriage_6.png-95df97198c9f1b75413cee8087c7e1e1.s3tc.ctex"]
 
 [params]
 

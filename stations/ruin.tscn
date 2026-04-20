@@ -10,13 +10,13 @@
 [node name="Station" unique_id=18370819 instance=ExtResource("1_6i7go")]
 
 [node name="Camera3D" parent="." index="0" unique_id=1824744721]
-transform = Transform3D(0.28230804, 0, -0.9593239, 0, 1, 0, 0.9593239, 0, 0.28230804, 0.96340704, 1.3055134, -4.1180153)
+transform = Transform3D(0.10241066, 0, -0.9947423, 0, 1, 0, 0.9947423, 0, 0.10241066, 0.96340704, 1.3055134, -4.1180153)
 
 [node name="Signal" parent="." index="2" unique_id=194747013]
 transform = Transform3D(-0.16008791, 0, -0.98710275, 0, 1, 0, 0.98710275, 0, -0.16008791, 13.338002, 4.0774, -2.0615914)
 texture = ExtResource("2_pjfh6")
 
-[node name="ruin" parent="." index="4" unique_id=1432851566 instance=ExtResource("2_tpr8n")]
+[node name="ruin" parent="." index="4" unique_id=68381793 instance=ExtResource("2_tpr8n")]
 
 [node name="Sprite3D" type="Sprite3D" parent="ruin" index="4" unique_id=2046684775]
 transform = Transform3D(-0.050714944, 0, -0.9987132, 0, 1, 0, 0.9987132, 0, -0.050714944, 6.5002937, 0, -4.301232)

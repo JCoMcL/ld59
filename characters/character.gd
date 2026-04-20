@@ -1,4 +1,5 @@
 extends Control
+class_name Character
 
 @export var speaker_color:Color
 @export var speaker_portrait:Texture2D
@@ -112,7 +113,7 @@ func fade_and_remove():
 func _on_fade_out_finished():
 	var p = Root.get_dialogue_panel(self)
 	if p:
-		p.queue_free()
+		p.clear()
 	queue_free()
 
 
