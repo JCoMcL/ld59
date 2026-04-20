@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c35oxptis1pn5"]
+
+[ext_resource type="Texture2D" uid="uid://curq5kfp5sfu3" path="res://blender-files/kings_cross_train.png" id="1_cgwm8"]
+
+[resource]
+resource_name = "train.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_cgwm8")
+roughness = 0.24744028

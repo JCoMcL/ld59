@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cb5sa5egiafr3"]
+
+[ext_resource type="PackedScene" uid="uid://bw3p0prmascp4" path="res://stations/station.tscn" id="1_6i7go"]
+[ext_resource type="Texture2D" uid="uid://dy2qwko7vxvlf" path="res://stations/signals/bottle.png" id="2_pjfh6"]
+[ext_resource type="PackedScene" uid="uid://d3lwenej4lupy" path="res://blender-files/ruin.glb" id="2_tpr8n"]
+[ext_resource type="Texture2D" uid="uid://cklioeupxljbq" path="res://props/burnt0.png" id="3_pjfh6"]
+[ext_resource type="Texture2D" uid="uid://ik2tuaq7vxwb" path="res://props/burnt1.png" id="4_baejt"]
+[ext_resource type="PackedScene" uid="uid://ddmg6w1bup356" path="res://characters/wretch.tscn" id="5_tpr8n"]
+
+[node name="Station" unique_id=18370819 instance=ExtResource("1_6i7go")]
+
+[node name="Camera3D" parent="." index="0" unique_id=1824744721]
+transform = Transform3D(0.28230804, 0, -0.9593239, 0, 1, 0, 0.9593239, 0, 0.28230804, 0.96340704, 1.3055134, -4.1180153)
+
+[node name="Signal" parent="." index="2" unique_id=194747013]
+transform = Transform3D(-0.16008791, 0, -0.98710275, 0, 1, 0, 0.98710275, 0, -0.16008791, 13.338002, 4.0774, -2.0615914)
+texture = ExtResource("2_pjfh6")
+
+[node name="ruin" parent="." index="4" unique_id=1432851566 instance=ExtResource("2_tpr8n")]
+
+[node name="Sprite3D" type="Sprite3D" parent="ruin" index="4" unique_id=2046684775]
+transform = Transform3D(-0.050714944, 0, -0.9987132, 0, 1, 0, 0.9987132, 0, -0.050714944, 6.5002937, 0, -4.301232)
+offset = Vector2(0, 256)
+texture = ExtResource("3_pjfh6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="ruin" index="5" unique_id=1849691908]
+transform = Transform3D(-0.62782717, 0, 0.77835274, 0, 1, 0, -0.77835274, 0, -0.62782717, 6.5002937, -0.1375823, -7.5426717)
+offset = Vector2(0, 256)
+texture = ExtResource("3_pjfh6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="ruin" index="6" unique_id=1730030827]
+transform = Transform3D(-0.050714944, 0, -0.9987132, 0, 1, 0, 0.9987132, 0, -0.050714944, 6.1274123, 0, -3.0248156)
+offset = Vector2(0, 256)
+texture = ExtResource("4_baejt")
+
+[node name="Sprite3D4" type="Sprite3D" parent="ruin" index="7" unique_id=734723321]
+transform = Transform3D(-0.99975044, 0, 0.022338286, 0, 1, 0, -0.022338286, 0, -0.99975044, 4.981398, -2.3841858e-07, -8.007994)
+offset = Vector2(0, 256)
+texture = ExtResource("4_baejt")
+
+[node name="Sprite3D5" type="Sprite3D" parent="ruin" index="8" unique_id=1411404920]
+transform = Transform3D(0.9721249, 0, 0.23446357, 0, 1, 0, -0.23446357, 0, 0.9721249, 2.8400877, -2.3841858e-07, -8.0683)
+offset = Vector2(0, 256)
+texture = ExtResource("4_baejt")
+
+[node name="Wretch" parent="ruin" index="9" unique_id=986362808 instance=ExtResource("5_tpr8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3445363, 0, -6.067231)

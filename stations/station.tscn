@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bw3p0prmascp4"]
 
 [ext_resource type="Script" uid="uid://b3cfdq6uymh0b" path="res://stations/station.gd" id="1_xcc85"]
-[ext_resource type="PackedScene" uid="uid://bc1dr2vgdtyd8" path="res://characters/character3D.tscn" id="3_lx0ve"]
 [ext_resource type="Script" uid="uid://bjcndfpxnymj" path="res://stations/train.gd" id="4_mjqib"]
 [ext_resource type="Texture2D" uid="uid://bj42bmbc5pg1a" path="res://stations/signals/signal.png" id="7_7pt3f"]
 
@@ -29,9 +28,6 @@ transform = Transform3D(-0.16008791, 0, -0.98710275, 0, 1, 0, 0.98710275, 0, -0.
 texture = ExtResource("7_7pt3f")
 
 [node name="Node3D" type="Node3D" parent="Signal" unique_id=1648324475]
-
-[node name="Character" parent="." unique_id=986362808 instance=ExtResource("3_lx0ve")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3543, 0, -6.1897926)
 
 [node name="Train" type="Control" parent="." unique_id=996110091]
 unique_name_in_owner = true

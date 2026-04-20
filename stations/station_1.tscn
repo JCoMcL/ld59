@@ -2,12 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://bw3p0prmascp4" path="res://stations/station.tscn" id="1_11clu"]
 [ext_resource type="PackedScene" uid="uid://daexlpbm22hs5" path="res://blender-files/station 1.glb" id="1_sp5kl"]
+[ext_resource type="PackedScene" uid="uid://bc1dr2vgdtyd8" path="res://characters/character3D.tscn" id="3_u6t7x"]
 
-[node name="Station" unique_id=18370819 instance=ExtResource("1_11clu")]
+[node name="Station2" unique_id=18370819 instance=ExtResource("1_11clu")]
 
-[node name="station 1" parent="." index="5" unique_id=1204985178 instance=ExtResource("1_sp5kl")]
+[node name="station 1" parent="." index="4" unique_id=1204985178 instance=ExtResource("1_sp5kl")]
 
 [node name="Point" parent="station 1/Lamp" parent_id_path=PackedInt32Array(1204985178, 169700418) index="2" unique_id=35906822]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 3.2092345, 0)
+
+[node name="Character" parent="." index="5" unique_id=986362808 instance=ExtResource("3_u6t7x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.370498, 0, -5.961854)
 
 [editable path="station 1"]

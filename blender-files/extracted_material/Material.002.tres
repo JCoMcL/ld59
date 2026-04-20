@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b47ktd07gby6x"]
+
+[ext_resource type="Texture2D" uid="uid://ewgyvriuc7kq" path="res://blender-files/kings_cross_carriage.png" id="1_8vrsm"]
+
+[resource]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_8vrsm")
+roughness = 0.5

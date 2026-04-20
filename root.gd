@@ -5,7 +5,7 @@ var SCENES = {
 	&"train": preload("res://interior.tscn"),
 	&"1": preload("res://stations/station_1.tscn"),
 	&"2": preload("res://stations/kings_cross.tscn"),
-	&"3": preload("res://stations/temp/temp_station_3.tscn"),
+	&"3": preload("res://stations/ruin.tscn"),
 	&"4": preload("res://stations/temp/temp_station_4.tscn"),
 	&"5": preload("res://stations/temp/temp_station_5.tscn")
 }
