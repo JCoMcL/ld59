@@ -6,7 +6,7 @@ extends Control
 @export var width_ratio = 0.4
 @export var speaker_color: Color = Color.WHITE
 
-@onready var timeline = $"ScrollContainer/VBoxContainer"
+@onready var timeline = %Timeline
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,7 +26,10 @@ func set_speaker_portrait(tex:Texture2D):
 	if not tex:
 		return
 	%SpeakerPortrait.texture = tex
-	%SpeakerPortrait.position.x = -tex.get_size().x -10 
+	%SpeakerPortrait.position = Vector2(
+		-tex.get_size().x,
+		25
+	)
 
 const textbox_scn = preload("res://ui/textbox.tscn")
 const button_scn = preload("res://ui/textbox_answer.tscn")
@@ -35,7 +38,7 @@ const questionbox_scn = preload("res://ui/textbox_question.tscn")
 
 func add_to_timeline(n:Control):
 	timeline.add_child(n)
-	$ScrollContainer.autoscroll_enabled = true
+	%ScrollContainer.autoscroll_enabled = true
 
 func add_box(s:String, scn:PackedScene=textbox_scn) -> TextBox:
 	visible = true

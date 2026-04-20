@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn15g3n6bs88t"
-path.s3tc="res://.godot/imported/character.png-6e5b2b07ce5fd9d885c093317f565998.s3tc.ctex"
+uid="uid://bj42bmbc5pg1a"
+path.s3tc="res://.godot/imported/signal.png-e4c67c1b98035e05c93a0947e15c6e52.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://characters/character.png"
-dest_files=["res://.godot/imported/character.png-6e5b2b07ce5fd9d885c093317f565998.s3tc.ctex"]
+source_file="res://stations/signals/signal.png"
+dest_files=["res://.godot/imported/signal.png-e4c67c1b98035e05c93a0947e15c6e52.s3tc.ctex"]
 
 [params]
 

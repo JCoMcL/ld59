@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deh12g3h7d44f"
-path="res://.godot/imported/wretch.png-1825df77c9394f848d0915c9b9e24397.ctex"
+uid="uid://bxltbtkbjs2a4"
+path="res://.godot/imported/bayer8tile4.png-8379121e43d2b3697331ab97b2ddf72b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/portraits_large/wretch.png"
-dest_files=["res://.godot/imported/wretch.png-1825df77c9394f848d0915c9b9e24397.ctex"]
+source_file="res://dither_assets/bayer8tile4.png"
+dest_files=["res://.godot/imported/bayer8tile4.png-8379121e43d2b3697331ab97b2ddf72b.ctex"]
 
 [params]
 

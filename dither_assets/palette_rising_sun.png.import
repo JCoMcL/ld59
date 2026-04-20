@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpglkkibw1jco"
-path="res://.godot/imported/merchant.png-4b81b75fba494991f14aa1092ba260fc.ctex"
+uid="uid://bki48mmqpgnln"
+path="res://.godot/imported/palette_rising_sun.png-074e5fc4ebf17bdce4186468001f1f66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/portraits_large/merchant.png"
-dest_files=["res://.godot/imported/merchant.png-4b81b75fba494991f14aa1092ba260fc.ctex"]
+source_file="res://dither_assets/palette_rising_sun.png"
+dest_files=["res://.godot/imported/palette_rising_sun.png-074e5fc4ebf17bdce4186468001f1f66.ctex"]
 
 [params]
 

@@ -16,5 +16,4 @@ func _process(delta: float) -> void:
 		var scroll_amount = ceil(scroll_speed * delta) 
 		scroll_vertical += scroll_amount
 		if auto_disable and scroll_vertical < (prev_scroll + scroll_amount):
-			
 			autoscroll_enabled = false
