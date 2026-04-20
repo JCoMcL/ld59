@@ -3,11 +3,11 @@ extends Control
 
 var SCENES = {
 	&"train": preload("res://interior.tscn"),
-	&"1": preload("res://stations/temp_station_1.tscn"),
-	&"2": preload("res://stations/temp_station_2.tscn"),
-	&"3": preload("res://stations/temp_station_3.tscn"),
-	&"4": preload("res://stations/temp_station_4.tscn"),
-	&"5": preload("res://stations/temp_station_5.tscn")
+	&"1": preload("res://stations/station_1.tscn"),
+	&"2": preload("res://stations/kings_cross.tscn"),
+	&"3": preload("res://stations/temp/temp_station_3.tscn"),
+	&"4": preload("res://stations/temp/temp_station_4.tscn"),
+	&"5": preload("res://stations/temp/temp_station_5.tscn")
 }
 
 var TRAINS = {
@@ -55,11 +55,12 @@ static func get_root(from: Node) -> Root:
 		from = from.get_parent()
 	return from
 
-func _ready():	
+func _ready():
 	inventory.append({"name": "Love Letter", "image": preload("res://ui/loveletter.png")})
 	inventory.append({"name": "Locket", "image": preload("res://ui/locket.png")})
 	create_inventory_panel()
 	create_inventory_button()
+	change_scene("1")
 
 func change_scene(id:StringName):
 	assert(SCENES.has(id))
@@ -69,11 +70,18 @@ func change_scene(id:StringName):
 	SFXPlayer.get_sfx_player(self).play_sfx("switch_station")
 	await %Curtain.close(Curtain.RIGHT)
 	await get_tree().create_timer(0.3).timeout
-	remove_child(backdrop)
+	
+	assert(backdrop.is_inside_tree())
+	backdrop.get_parent().remove_child(backdrop)
+	assert(not backdrop.is_inside_tree())
 	backdrop = SCENES[id]
-	add_child(backdrop)
-	move_child(backdrop, 0)
-	backdrop.z_index = -1
+	if backdrop is Node3D:
+		%SubViewport.add_child(backdrop)
+	elif backdrop is Control:		
+		add_child(backdrop)
+		move_child(backdrop, 0)
+		backdrop.visible=true
+
 	print("train: %s, station: %s" % [current_train, id])
 	print("other trains at station: %s" % ", ".join(get_other_trains(id)))
 	print("table of trains at station: %s" % ", ".join(timetable))

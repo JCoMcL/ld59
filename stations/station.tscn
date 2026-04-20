@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bw3p0prmascp4"]
+
+[ext_resource type="Script" uid="uid://b3cfdq6uymh0b" path="res://stations/station.gd" id="1_xcc85"]
+[ext_resource type="PackedScene" uid="uid://bc1dr2vgdtyd8" path="res://characters/character3D.tscn" id="3_lx0ve"]
+[ext_resource type="Script" uid="uid://bjcndfpxnymj" path="res://stations/train.gd" id="4_mjqib"]
+[ext_resource type="Texture2D" uid="uid://bj42bmbc5pg1a" path="res://stations/signals/signal.png" id="7_7pt3f"]
+
+[sub_resource type="Environment" id="Environment_sp5kl"]
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 1.0
+fog_depth_curve = 0.4665163
+fog_depth_begin = 5.0
+fog_depth_end = 50.0
+
+[node name="Station" type="Node3D" unique_id=18370819]
+script = ExtResource("1_xcc85")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1824744721]
+transform = Transform3D(-0.15627927, 0, -0.9877129, 0, 1, 0, 0.9877129, 0, -0.15627927, 4.7888236, 1.3055134, -5.239232)
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2084773935]
+environment = SubResource("Environment_sp5kl")
+
+[node name="Signal" type="Sprite3D" parent="." unique_id=194747013]
+transform = Transform3D(-0.16008791, 0, -0.98710275, 0, 1, 0, 0.98710275, 0, -0.16008791, 27.708952, 2.301429, -0.38290524)
+texture = ExtResource("7_7pt3f")
+
+[node name="Node3D" type="Node3D" parent="Signal" unique_id=1648324475]
+
+[node name="Character" parent="." unique_id=986362808 instance=ExtResource("3_lx0ve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3543, 0, -6.1897926)
+
+[node name="Train" type="Control" parent="." unique_id=996110091]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_mjqib")

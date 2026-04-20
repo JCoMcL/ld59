@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cebrsxgdn4ufi"]
+
+[ext_resource type="Texture2D" uid="uid://cvnwfsh3l72o2" path="res://blender-files/textures/carriage.png" id="1_iiqw2"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_iiqw2")
+roughness = 0.5

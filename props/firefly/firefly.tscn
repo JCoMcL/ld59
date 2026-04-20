@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cdb521gxnwbxy"]
+
+[ext_resource type="Shader" uid="uid://pmlsq4dohycp" path="res://props/firefly/glow.gdshader" id="1_82b85"]
+[ext_resource type="Texture2D" uid="uid://da2gmvik4rv5l" path="res://props/firefly/firefly.tres" id="2_lytt6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ax4nt"]
+render_priority = 0
+shader = ExtResource("1_82b85")
+shader_parameter/albedo_texture = ExtResource("2_lytt6")
+
+[node name="Firefly" type="Sprite3D" unique_id=826566097]
+transform = Transform3D(0.06724913, 0, -0.9977362, 0, 1, 0, 0.9977362, 0, 0.06724913, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_ax4nt")
+pixel_size = 0.0066
+billboard = 1
+texture = ExtResource("2_lytt6")

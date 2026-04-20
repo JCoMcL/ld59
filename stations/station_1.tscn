@@ -1,90 +1,13 @@
 [gd_scene format=3 uid="uid://dkiv1yd2of2dc"]
 
+[ext_resource type="PackedScene" uid="uid://bw3p0prmascp4" path="res://stations/station.tscn" id="1_11clu"]
 [ext_resource type="PackedScene" uid="uid://daexlpbm22hs5" path="res://blender-files/station 1.glb" id="1_sp5kl"]
-[ext_resource type="Texture2D" uid="uid://dn15g3n6bs88t" path="res://characters/character.png" id="2_11clu"]
-[ext_resource type="Script" uid="uid://fpdc3841xl53" path="res://camera_3d.gd" id="2_7702b"]
-[ext_resource type="Script" uid="uid://cbn0ro7nheh1j" path="res://stations/bench3D.gd" id="2_ax4nt"]
-[ext_resource type="Script" uid="uid://da50ltsbr3ip1" path="res://stations/interactable.gd" id="2_u6t7x"]
-[ext_resource type="Script" uid="uid://bh5lci4x64a6w" path="res://stations/train3D.gd" id="3_4mmx0"]
-[ext_resource type="Script" uid="uid://d01pck3eq7tgb" path="res://characters/character.gd" id="5_aiyga"]
-[ext_resource type="Texture2D" uid="uid://bqha017spq743" path="res://characters/drunkard.png" id="6_xfy23"]
-[ext_resource type="Shader" uid="uid://pmlsq4dohycp" path="res://stations/firefly/glow.gdshader" id="7_glac0"]
-[ext_resource type="Texture2D" uid="uid://da2gmvik4rv5l" path="res://stations/firefly/firefly.tres" id="8_2cs3m"]
-[ext_resource type="Texture2D" uid="uid://bj42bmbc5pg1a" path="res://stations/signals/signal.png" id="9_2cs3m"]
 
-[sub_resource type="Environment" id="Environment_sp5kl"]
-fog_enabled = true
-fog_mode = 1
-fog_light_color = Color(0, 0, 0, 1)
-fog_density = 1.0
-fog_depth_curve = 0.4665163
-fog_depth_begin = 5.0
-fog_depth_end = 50.0
+[node name="Station" unique_id=18370819 instance=ExtResource("1_11clu")]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_7702b"]
-height = 2.0584428
-radius = 0.381
+[node name="station 1" parent="." index="5" unique_id=1204985178 instance=ExtResource("1_sp5kl")]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ax4nt"]
-render_priority = 0
-shader = ExtResource("7_glac0")
-shader_parameter/albedo_texture = ExtResource("8_2cs3m")
-
-[node name="Node3D" type="Node3D" unique_id=18370819]
-
-[node name="station 1" parent="." unique_id=1163197819 instance=ExtResource("1_sp5kl")]
-
-[node name="StaticBody3D" parent="station 1/Bench/bench" parent_id_path=PackedInt32Array(1163197819, 1734691747) index="0" unique_id=706594508]
-script = ExtResource("2_ax4nt")
-
-[node name="StaticBody3D" parent="station 1/Steam Locomotive/Engine" parent_id_path=PackedInt32Array(1163197819, 1484526409) index="0" unique_id=1043376327]
-script = ExtResource("3_4mmx0")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1824744721]
-transform = Transform3D(-0.15627927, 0, -0.9877129, 0, 1, 0, 0.9877129, 0, -0.15627927, 4.7888236, 1.3055134, -5.239232)
-current = true
-script = ExtResource("2_7702b")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2084773935]
-environment = SubResource("Environment_sp5kl")
-
-[node name="Node3D" type="Node3D" parent="." unique_id=1979745257]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.379852, 7.1525574e-07, -6.176484)
-
-[node name="Sprite3D" type="Sprite3D" parent="Node3D" unique_id=1582204606]
-offset = Vector2(0, 108.99)
-billboard = 1
-texture = ExtResource("2_11clu")
-
-[node name="InteractionArea" type="Area3D" parent="Node3D" unique_id=1556237418]
-script = ExtResource("2_u6t7x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/InteractionArea" unique_id=1473655357]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1377418, 0)
-shape = SubResource("CylinderShape3D_7702b")
-
-[node name="Control" type="Control" parent="Node3D" unique_id=1244415048]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("5_aiyga")
-speaker_color = Color(0.3529866, 0.9237442, 0.7596494, 1)
-speaker_portrait = ExtResource("6_xfy23")
-
-[node name="Firefly" type="Sprite3D" parent="." unique_id=2101391867]
-transform = Transform3D(0.06724913, 0, -0.9977362, 0, 1, 0, 0.9977362, 0, 0.06724913, 14.007676, 3.1788983, -5.014004)
-material_override = SubResource("ShaderMaterial_ax4nt")
-pixel_size = 0.0066
-billboard = 1
-texture = ExtResource("8_2cs3m")
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=194747013]
-transform = Transform3D(-0.16008791, 0, -0.98710275, 0, 1, 0, 0.98710275, 0, -0.16008791, 27.708952, 2.301429, -0.38290524)
-texture = ExtResource("9_2cs3m")
-
-[node name="Node3D" type="Node3D" parent="Sprite3D" unique_id=1648324475]
-
-[connection signal="interacted_with" from="Node3D/InteractionArea" to="Node3D/Control" method="open_dialogue"]
+[node name="Point" parent="station 1/Lamp" parent_id_path=PackedInt32Array(1204985178, 169700418) index="2" unique_id=35906822]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 3.2092345, 0)
 
 [editable path="station 1"]

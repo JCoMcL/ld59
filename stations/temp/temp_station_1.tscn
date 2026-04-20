@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bo8wpeovb82mm"]
 
-[ext_resource type="Texture2D" uid="uid://b2pitm1dqf4m3" path="res://stations/station_1.png" id="1_bpsct"]
+[ext_resource type="Texture2D" uid="uid://b2pitm1dqf4m3" path="res://stations/temp/station_1.png" id="1_bpsct"]
 [ext_resource type="Script" uid="uid://c23cgrmpjmrji" path="res://stations/background_image.gd" id="2_5l1d2"]
-[ext_resource type="Texture2D" uid="uid://ccv0tn0erryjl" path="res://stations/train.png" id="3_eys6e"]
-[ext_resource type="Texture2D" uid="uid://d2wx2v6jridfe" path="res://bench.png" id="3_xt3yd"]
+[ext_resource type="Texture2D" uid="uid://ccv0tn0erryjl" path="res://stations/temp/train.png" id="3_eys6e"]
+[ext_resource type="Texture2D" uid="uid://d2wx2v6jridfe" path="res://stations/temp/bench2.png" id="3_xt3yd"]
 [ext_resource type="Script" uid="uid://bjcndfpxnymj" path="res://stations/train.gd" id="4_ni3nl"]
 [ext_resource type="Script" path="res://stations/bench.gd" id="4_oobug"]
 [ext_resource type="Texture2D" uid="uid://dn15g3n6bs88t" path="res://characters/character.png" id="4_rtb34"]

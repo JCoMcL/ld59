@@ -55,6 +55,9 @@ func play_sfx(effect_name: String) -> SFXControl:
 
 	var id: int
 	var pb = get_playback(self)
+	if not pb:
+		print("warning: failed to play %s, fuckass bug" % effect_name)
+		return null
 	id = pb.play_stream(sfx[effect_name])
 	return SFXControl.new(pb, id, effect_name)
 

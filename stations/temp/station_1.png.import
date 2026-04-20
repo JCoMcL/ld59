@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6riwyj2pjy3a"
-path="res://.godot/imported/kings cross.png-b4b766f7e4666b6d21f78ac291c85705.ctex"
+uid="uid://b2pitm1dqf4m3"
+path="res://.godot/imported/station_1.png-8eb701bdd3b85882fa32fc93b4859e03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stations/kings cross.png"
-dest_files=["res://.godot/imported/kings cross.png-b4b766f7e4666b6d21f78ac291c85705.ctex"]
+source_file="res://stations/temp/station_1.png"
+dest_files=["res://.godot/imported/station_1.png-8eb701bdd3b85882fa32fc93b4859e03.ctex"]
 
 [params]
 

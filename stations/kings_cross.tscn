@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dfad1tsvrmtf8"]
+
+[ext_resource type="PackedScene" uid="uid://bw3p0prmascp4" path="res://stations/station.tscn" id="1_4gqlm"]
+[ext_resource type="PackedScene" uid="uid://c0gbbjioa7ew1" path="res://blender-files/kings_cross.glb" id="2_p71nc"]
+
+[node name="Station" unique_id=18370819 instance=ExtResource("1_4gqlm")]
+
+[node name="Signal" parent="." index="2" unique_id=194747013]
+transform = Transform3D(-0.16008791, 0, -0.98710275, 0, 1, 0, 0.98710275, 0, -0.16008791, 15.91066, 8.172328, -0.52212024)
+
+[node name="Character" parent="." index="3" unique_id=986362808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.997046, 0, -4.557623)
+
+[node name="kings_cross" parent="." index="4" unique_id=245156367 instance=ExtResource("2_p71nc")]
