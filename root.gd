@@ -42,6 +42,12 @@ static func remove_from_inventory(item_name: String):
 
 static func add_item_to_inventory(item_name: String, image: Texture):
 	inventory.append({"name": item_name, "image": image})
+
+static func has_item(item_name: String) -> bool:
+	for item in inventory:
+		if item["name"] == item_name:
+			return true
+	return false
 	
 static func get_root(from: Node) -> Root:
 	while from and from is not Root:
