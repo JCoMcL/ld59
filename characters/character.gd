@@ -17,7 +17,6 @@ func open_dialogue():
 	await p.add_description_box(
 "A torn-off voice is reaching you through his mouth, the rest of his body appears almost immobile."
 	).done_showing
-	
 	var answer = await p.add_question_box({
 		"1": "Fell asleep.",
 		"2": "Something terrible."
@@ -29,7 +28,7 @@ func open_dialogue():
 		await p.add_description_box("He chuckels").done_showing
 
 	answer = await p.add_question_box({
-		"1": "Who are you?",
+		"1": "Who are you?"
 	})
 	await p.add_speech_box("I forgot. I didn't however forget the last thing I had before I got here. A juicy n' crusty beef Wellington. Call me that I guessh'.").done_showing
 
@@ -73,22 +72,47 @@ func open_dialogue():
 
 
 	answer = await p.add_question_box({
-		"1": "How do I leave then?",
+		"1": "How do I leave then?"
 	})
 	await p.add_speech_box("You see that tableu? These are broken I think. They say 'destination' but it's no real destination. What 'et really should be is 'next station'. Them bastards should have hired *me* to do it.  Trains come in and leave every day, so you got to wait it out on a bench. Funny part though - I am sure there are just 4 stations so you are not getting anywhere anyways.*He gives you a hopeful glaze* So, I would suggest you stay here. I got another clear bottle, and we could be bottle buds!").done_showing
 	await p.add_description_box("The expression on his face is desperately trying to communicate positivity and carelessness, but you feel the innatural insanity bleeding through it. This man will not help you any longer, neither you can truly help him").done_showing
 
 	answer = await p.add_question_box({
-		"1": "I am sorry, I must go. [Conclude]",
-		"2": "You don't look like a man of a trustworthy character, I will make my way. [Conclude]"
+		"1": "I am sorry, I must go.",
+		"2": "You don't look like a man of a trustworthy character, I will make my way."
 	})	
 	if answer == "1":
 		await p.add_speech_box("I wish I could stop you. Get lost then.").done_showing
+		await fade_and_remove()
 	elif answer == "2":
 		await p.add_description_box("A geniuine smile sparks on the man's face").done_showing
 		await p.add_speech_box("I wasn't called that for many-many years. You telling me you are a saint? In this place?").done_showing
 		await p.add_description_box("He points at you and laughs hysterically").done_showing
 		await p.add_speech_box("Well, I don't know laddie, luck be with you then").done_showing
+
+	answer = await p.add_question_box({
+		"1": "[CONCLUDE]"
+	})
+	if answer == "1":
+		await fade_and_remove()
+
+func fade_and_remove():
+	var sprite = get_node_or_null("../Sprite3D")
+	if sprite:
+		var tween = create_tween()
+		tween.tween_property(sprite, "modulate:a", 0.0, 1.0)
+		tween.tween_callback(Callable(self, "_on_fade_out_finished"))
+	else:
+		# fallback: fade out self
+		var tween = create_tween()
+		tween.tween_property(self, "modulate:a", 0.0, 1.0)
+		tween.tween_callback(Callable(self, "_on_fade_out_finished"))
+
+func _on_fade_out_finished():
+	var p = Root.get_dialogue_panel(self)
+	if p:
+		p.queue_free()
+	queue_free()
 
 
 func _gui_input(ev: InputEvent):
