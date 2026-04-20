@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eeassuq81qmw"
-path="res://.godot/imported/lost.png-9f78b34ace5c60bf7ff855c2a5584a96.ctex"
+uid="uid://mx62nfnxir5i"
+path="res://.godot/imported/palette_moonlight.png-ffcbe923cd381edf7b990105c9b798cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/portraits_large/lost.png"
-dest_files=["res://.godot/imported/lost.png-9f78b34ace5c60bf7ff855c2a5584a96.ctex"]
+source_file="res://dither_assets/palette_moonlight.png"
+dest_files=["res://.godot/imported/palette_moonlight.png-ffcbe923cd381edf7b990105c9b798cb.ctex"]
 
 [params]
 

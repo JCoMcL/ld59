@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1clktm4j4yns"
-path="res://.godot/imported/drunkard.png-72077bc349b1411aa1887733003fe1a8.ctex"
+uid="uid://dsup8dlcjfiak"
+path="res://.godot/imported/palette_hollow.png-07b0059020d5c652bfc664722c685429.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/portraits_large/drunkard.png"
-dest_files=["res://.godot/imported/drunkard.png-72077bc349b1411aa1887733003fe1a8.ctex"]
+source_file="res://dither_assets/palette_hollow.png"
+dest_files=["res://.godot/imported/palette_hollow.png-07b0059020d5c652bfc664722c685429.ctex"]
 
 [params]
 
