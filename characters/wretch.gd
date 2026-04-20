@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 @export var speaker_color:Color
 @export var speaker_portrait:Texture2D

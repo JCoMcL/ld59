@@ -74,7 +74,9 @@ func open_dialogue():
 	answer = await p.add_question_box({
 		"1": "How do I leave then?"
 	})
-	await p.add_speech_box("You see that tableau? These are broken, I think. They say 'destination', but it's no real destination. What it really should be is 'next station'. Them bastards should have hired *me* to do it. Trains come in and leave every day, so you got to wait it out on a bench. Funny part though—I am sure there are just four stations, so you are not getting anywhere anyway. *He gives you a hopeful gaze* So, I would suggest you stay here. I got another clear bottle, and we could be bottle buds!").done_showing
+	await p.add_speech_box("You see the train? It leaves and comes back eventually. It goes around some stations. It comes in and leaves every day, so you got to wait it out on a bench. Funny part though—I am sure there are just four stations, so you are not getting anywhere anyway.").done_showing
+	await p.add_description_box("He gives you a hopeful gaze.").done_showing 
+	await p.add_speech_box("So, I would suggest you stay here. I got another clear bottle, and we could be bottle buds!").done_showing
 	await p.add_description_box("The expression on his face is desperately trying to communicate positivity and carelessness, but you feel the unnatural insanity bleeding through it. This man will not help you any longer, nor can you truly help him.").done_showing
 
 	answer = await p.add_question_box({

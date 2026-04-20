@@ -35,10 +35,11 @@ static func get_dialogue_panel(from: Node) -> DialoguePanel:
 	return null
 
 static func remove_from_inventory(item_name: String):
-	for i in inventory.size():
+	for i in range(inventory.size()):
 		print("checking %s against %s" % [inventory[i]["name"], item_name])
-		if inventory[i-1]["name"] == item_name:
-			inventory.remove_at(i-1)
+		if inventory[i]["name"] == item_name:
+			inventory.remove_at(i)
+			return
 
 static func add_item_to_inventory(item_name: String, image: Texture):
 	inventory.append({"name": item_name, "image": image})
