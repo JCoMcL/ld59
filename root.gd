@@ -125,8 +125,11 @@ func generate_timetable():
 	return trains
 
 func wait_for_train():
+	await %Curtain.close(%Curtain.DOWN)
+	SFXPlayer.get_sfx_player(self).play_sfx("train")	
 	current_train = timetable[1]
 	timetable = generate_timetable()
 	print("Waiting for train: %s" % current_train)
 	print("New timetable: %s" % ", ".join(timetable))
-	SFXPlayer.get_sfx_player(self).play_sfx("train")
+	await get_tree().create_timer(3.0).timeout
+	await %Curtain.open(%Curtain.UP)
