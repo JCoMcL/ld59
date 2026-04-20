@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0py1rfip71c3"
-path="res://.godot/imported/ticket.png-60555fc5eca9e2e67fc1f9de54164e81.ctex"
+uid="uid://cc112khrm7ex5"
+path="res://.godot/imported/loveletter.png-be295e85ab45406136dce26bdcc651ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/ticket.png"
-dest_files=["res://.godot/imported/ticket.png-60555fc5eca9e2e67fc1f9de54164e81.ctex"]
+source_file="res://ui/loveletter.png"
+dest_files=["res://.godot/imported/loveletter.png-be295e85ab45406136dce26bdcc651ce.ctex"]
 
 [params]
 

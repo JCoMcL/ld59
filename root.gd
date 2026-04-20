@@ -40,11 +40,9 @@ static func get_root(from: Node) -> Root:
 	return from
 
 func _ready():	
-	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
-	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
-	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
-	inventory.append({"name": "Ticket", "image": preload("res://ui/ticket.png")})
-
+	inventory.append({"name": "Love Letter", "image": preload("res://ui/loveletter.png")})
+	inventory.append({"name": "Locket", "image": preload("res://ui/locket.png")})
+	inventory.append({"name": "Fake Gold", "image": preload("res://ui/gold.png")})
 	create_inventory_panel()
 	create_inventory_button()
 
@@ -58,6 +56,7 @@ func change_scene(id:StringName):
 	remove_child(backdrop)
 	backdrop = SCENES[id]
 	add_child(backdrop)
+	move_child(backdrop, 0)
 	backdrop.z_index = -1
 	print("train: %s, station: %s" % [current_train, id])
 	print("other trains at station: %s" % ", ".join(get_other_trains(id)))
