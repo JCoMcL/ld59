@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dnv4q30pblhiv"]
+
+[ext_resource type="Texture2D" uid="uid://cmo5a76tamhrx" path="res://blender-files/station 1_bumps.png" id="1_cld3v"]
+
+[resource]
+resource_name = "bumps"
+cull_mode = 2
+albedo_texture = ExtResource("1_cld3v")
+roughness = 0.5
+uv1_triplanar = true
+uv1_world_triplanar = true
