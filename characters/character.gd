@@ -83,7 +83,6 @@ func open_dialogue():
 	})	
 	if answer == "1":
 		await p.add_speech_box("I wish I could stop you. Get lost then.").done_showing
-		await fade_and_remove()
 	elif answer == "2":
 		await p.add_description_box("A genuine smile sparks on the man's face.").done_showing
 		await p.add_speech_box("I wasn't called that for many, many years. You telling me you are a saint? In this place?").done_showing
