@@ -22,13 +22,15 @@ func _ready():
 	open()
 
 enum {DOWN, UP, LEFT, RIGHT}
-func close(direction=DOWN, specific_duration = duration) -> Signal:
+func close(direction=DOWN, specific_duration = duration):
+	visible=true
 	material.set_shader_parameter("direction", direction)
 	var t = new_tween()
 	t.tween_method(set_openness, get_openness(), 0.0, specific_duration * get_openness())
-	return t.finished
-func open(direction=UP, specific_duration = duration) -> Signal:
+	await t.finished
+func open(direction=UP, specific_duration = duration):
 	material.set_shader_parameter("direction", [UP,DOWN,RIGHT,LEFT][direction])
 	var t = new_tween()
 	t.tween_method(set_openness, get_openness(), 1.0, specific_duration* (1.0 - get_openness()))
-	return t.finished
+	await t.finished
+	visible = false

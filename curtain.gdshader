@@ -18,13 +18,15 @@ void fragment() {
 	vec2 pixel_coord = RESOLUTION * UV;
 
 	// Adjust calculations for horizontal vs vertical wipes
+	float factor_hack = 0.0;
 	float res_major_axis = RESOLUTION.y;
 	if (direction == 2 || direction == 3) { // left or right
 		res_major_axis = RESOLUTION.x;
+		factor_hack = (1.0 - (RESOLUTION.y / RESOLUTION.x)) * .47;
 	}
-
-	float fudge_factor = (wave_size * 3.0) / res_major_axis;
-	float curtain_height = (factor - fudge_factor) * (1.0 + fudge_factor*2.0)  * res_major_axis;
+	
+	float fudge_amount = (wave_size * 4.0);
+	float curtain_height = (factor - factor_hack) * (res_major_axis + fudge_amount) - fudge_amount;
 
 	// Define rotation matrix based on direction
 	mat2[] rotations = {
@@ -34,6 +36,7 @@ void fragment() {
 		mat2(vec2(0.0, -1.0), vec2(1.0, 0.0)) // 90 deg CCW
 	};
 	
+
 	// Rotate coordinates around the center of the screen
 	vec2 center = RESOLUTION / 2.0;
 	vec2 pixel_coord_rotated = rotations[direction] * (pixel_coord - center) + center;
