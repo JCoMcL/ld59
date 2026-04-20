@@ -65,6 +65,7 @@ func change_scene(id:StringName):
 	if SCENES[id] is PackedScene:
 		SCENES[id] = SCENES[id].instantiate()
 	assert(SCENES[id] is Node)
+	SFXPlayer.get_sfx_player(self).play_sfx("switch_station")
 	await %Curtain.close(Curtain.RIGHT)
 	await get_tree().create_timer(0.3).timeout
 	remove_child(backdrop)
@@ -128,3 +129,4 @@ func wait_for_train():
 	timetable = generate_timetable()
 	print("Waiting for train: %s" % current_train)
 	print("New timetable: %s" % ", ".join(timetable))
+	SFXPlayer.get_sfx_player(self).play_sfx("train")
