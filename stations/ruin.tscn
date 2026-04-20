@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cklioeupxljbq" path="res://props/burnt0.png" id="3_pjfh6"]
 [ext_resource type="Texture2D" uid="uid://ik2tuaq7vxwb" path="res://props/burnt1.png" id="4_baejt"]
 [ext_resource type="PackedScene" uid="uid://ddmg6w1bup356" path="res://characters/wretch.tscn" id="5_tpr8n"]
+[ext_resource type="PackedScene" uid="uid://bp6fspfpq0v3c" path="res://characters/lost.tscn" id="7_baejt"]
 
 [node name="Station" unique_id=18370819 instance=ExtResource("1_6i7go")]
 
@@ -45,3 +46,6 @@ texture = ExtResource("4_baejt")
 
 [node name="Wretch" parent="ruin" index="9" unique_id=986362808 instance=ExtResource("5_tpr8n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3445363, 0, -6.067231)
+
+[node name="Character" parent="." index="5" unique_id=2023521441 instance=ExtResource("7_baejt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59997153, 0, -2.4206731)
