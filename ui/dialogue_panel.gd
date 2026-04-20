@@ -33,17 +33,21 @@ const button_scn = preload("res://ui/textbox_answer.tscn")
 const descbox_scn = preload("res://ui/textbox_description.tscn")
 const questionbox_scn = preload("res://ui/textbox_question.tscn")
 
+func add_to_timeline(n:Control):
+	timeline.add_child(n)
+	$ScrollContainer.autoscroll_enabled = true
+
 func add_box(s:String, scn:PackedScene=textbox_scn) -> TextBox:
 	visible = true
 	var tbox = scn.instantiate()
-	timeline.add_child(tbox)
+	add_to_timeline(tbox)
 	tbox.text = s
 	return tbox
 
 func add_button(id, s:String) -> Button:
 	var btn = button_scn.instantiate()
 	btn.text = s
-	timeline.add_child(btn)
+	add_to_timeline(btn)
 	btn.pressed.connect(_on_answer_pressed.emit.bind(id),CONNECT_ONE_SHOT)
 	return btn
 
@@ -56,10 +60,10 @@ func add_speech_box(s:String) -> TextBox:
 
 func add_question_box(answers:Dictionary, scn:PackedScene=questionbox_scn) -> String:
 	var qbox = scn.instantiate()
-	timeline.add_child(qbox)
+	add_to_timeline(qbox)
 	var vbox = qbox.get_node("VBoxContainer")
 	for a in answers.keys():
-		var answer = add_button(a, answers[a])
+		add_button(a, answers[a])
 		vbox.reparent(qbox)
 
 	return await _on_answer_pressed
