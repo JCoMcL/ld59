@@ -47,5 +47,5 @@ texture = ExtResource("4_baejt")
 [node name="Wretch" parent="ruin" index="9" unique_id=986362808 instance=ExtResource("5_tpr8n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3445363, 0, -6.067231)
 
-[node name="Character" parent="." index="5" unique_id=2023521441 instance=ExtResource("7_baejt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59997153, 0, -2.4206731)
+[node name="Character" parent="ruin" index="17" unique_id=2023521441 instance=ExtResource("7_baejt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6598988, 0.036146045, -3.2261662)

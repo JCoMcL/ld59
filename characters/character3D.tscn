@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dn15g3n6bs88t" path="res://characters/character.png" id="1_cc07s"]
 [ext_resource type="Script" uid="uid://da50ltsbr3ip1" path="res://stations/interactable.gd" id="2_pmn00"]
-[ext_resource type="Script" uid="uid://d01pck3eq7tgb" path="res://characters/character.gd" id="3_xpgj3"]
-[ext_resource type="Texture2D" uid="uid://bqha017spq743" path="res://characters/drunkard.png" id="4_h6pb2"]
+[ext_resource type="Script" uid="uid://d01pck3eq7tgb" path="res://characters/character.gd" id="3_uyv1x"]
+[ext_resource type="Texture2D" uid="uid://bqha017spq743" path="res://characters/drunkard.png" id="4_uyv1x"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7702b"]
 height = 2.0584428
@@ -28,9 +28,9 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("3_xpgj3")
-speaker_color = Color(0.20874912, 0.69416565, 0.64399993, 1)
-speaker_portrait = ExtResource("4_h6pb2")
+script = ExtResource("3_uyv1x")
+speaker_color = Color(0.27494842, 0.71294904, 0.38549152, 1)
+speaker_portrait = ExtResource("4_uyv1x")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=593534481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25658774, 0.58216, -0.21767955)

@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bp6fspfpq0v3c"]
 
 [ext_resource type="PackedScene" uid="uid://bc1dr2vgdtyd8" path="res://characters/character3D.tscn" id="1_ih50q"]
+[ext_resource type="Script" uid="uid://cvhq6424nutyk" path="res://characters/lost.gd" id="2_jlkgk"]
 [ext_resource type="Texture2D" uid="uid://bg47l78vmera7" path="res://characters/lost.png" id="2_qdw65"]
 
 [node name="Character" unique_id=986362808 instance=ExtResource("1_ih50q")]
 
 [node name="Control" parent="." index="2" unique_id=496310026]
-speaker_color = Color(0.7961117, 0.3717874, 0.35612893, 1)
+script = ExtResource("2_jlkgk")
+speaker_color = Color(0.3652779, 0.5615696, 0.57559, 1)
 speaker_portrait = ExtResource("2_qdw65")
