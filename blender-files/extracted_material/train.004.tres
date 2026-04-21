@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dffdyenvdnm4r"]
+
+[ext_resource type="Texture2D" uid="uid://bf6nx0goqtl8f" path="res://blender-files/end_train.png" id="1_24aw8"]
+
+[resource]
+resource_name = "train.004"
+cull_mode = 2
+albedo_texture = ExtResource("1_24aw8")
+roughness = 0.24744028

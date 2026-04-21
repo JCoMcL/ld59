@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bodqqqfdsw2mc"]
+
+[ext_resource type="Texture2D" uid="uid://b8qo2p6rftf6k" path="res://blender-files/end_tiles.png" id="1_nw0pb"]
+
+[resource]
+resource_name = "tiles.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_nw0pb")
+roughness = 0.5

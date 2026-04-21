@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hnrt536fm076"]
+
+[ext_resource type="Texture2D" uid="uid://dqv3ovunb8geu" path="res://blender-files/end_bumps.png" id="1_btl1t"]
+
+[resource]
+resource_name = "bumps.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_btl1t")
+roughness = 0.5

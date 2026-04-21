@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://twqas85xqno"]
+
+[ext_resource type="Texture2D" uid="uid://ilqq82h2w44m" path="res://blender-files/end_gravel.png" id="1_h2qwx"]
+
+[resource]
+resource_name = "gravel.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_h2qwx")
+roughness = 0.5

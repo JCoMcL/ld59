@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d3lwenej4lupy"
-path="res://.godot/imported/ruin.glb-c6b2983239dbc6b0fd7bfdf812224fe7.scn"
+uid="uid://bjfmopt51mdon"
+path="res://.godot/imported/end.glb-c306040bcfbf962d96d66dbc9a6809ac.scn"
 
 [deps]
 
-source_file="res://blender-files/ruin.glb"
-dest_files=["res://.godot/imported/ruin.glb-c6b2983239dbc6b0fd7bfdf812224fe7.scn"]
+source_file="res://blender-files/end.glb"
+dest_files=["res://.godot/imported/end.glb-c306040bcfbf962d96d66dbc9a6809ac.scn"]
 
 [params]
 
@@ -44,20 +44,45 @@ _subresources={
 "use_external/fallback_path": "res://blender-files/extracted_material/Flagstones.tres",
 "use_external/path": "uid://c13p7kjjm7rqg"
 },
+"Flagstones.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://blender-files/extracted_material/Flagstones.001.tres",
+"use_external/path": "uid://bqvernef7jlkn"
+},
+"Material.005": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://blender-files/extracted_material/Material.005.tres",
+"use_external/path": "uid://cu0l2qkdhxqvi"
+},
 "bumps": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://blender-files/extracted_material/bumps.tres",
 "use_external/path": "uid://dnv4q30pblhiv"
 },
-"gravel": {
+"bumps.001": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://blender-files/extracted_material/gravel.tres",
-"use_external/path": "uid://0prf2fxjlv24"
+"use_external/fallback_path": "res://blender-files/extracted_material/bumps.001.tres",
+"use_external/path": "uid://hnrt536fm076"
+},
+"gravel.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://blender-files/extracted_material/gravel.001.tres",
+"use_external/path": "uid://twqas85xqno"
 },
 "tiles": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://blender-files/extracted_material/tiles.tres",
 "use_external/path": "uid://b86m1lql2jigt"
+},
+"tiles.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://blender-files/extracted_material/tiles.001.tres",
+"use_external/path": "uid://bodqqqfdsw2mc"
+},
+"train.004": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://blender-files/extracted_material/train.004.tres",
+"use_external/path": "uid://dffdyenvdnm4r"
 }
 }
 }

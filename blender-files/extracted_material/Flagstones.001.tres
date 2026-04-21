@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqvernef7jlkn"]
+
+[ext_resource type="Texture2D" uid="uid://d2qbdil5gn8gl" path="res://blender-files/end_flagstones.png" id="1_bxeea"]
+
+[resource]
+resource_name = "Flagstones.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_bxeea")
+roughness = 0.5
