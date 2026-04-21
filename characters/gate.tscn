@@ -2,11 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://bc1dr2vgdtyd8" path="res://characters/character3D.tscn" id="1_7k41f"]
 [ext_resource type="Texture2D" uid="uid://wxm0yumqu0pn" path="res://props/gate.png" id="2_gsq6j"]
+[ext_resource type="Texture2D" uid="uid://dgc056tmlcxxy" path="res://characters/angel.png" id="3_gsq6j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_44au8"]
 size = Vector3(4.2471924, 3.552124, 1)
 
-[node name="Character" unique_id=986362808 instance=ExtResource("1_7k41f")]
+[node name="Character2" unique_id=986362808 instance=ExtResource("1_7k41f")]
 
 [node name="Sprite3D" parent="." index="0" unique_id=1684594524]
 billboard = 0
@@ -15,3 +16,7 @@ texture = ExtResource("2_gsq6j")
 [node name="CollisionShape3D" parent="InteractionArea" parent_id_path=PackedInt32Array(1970033984) index="0" unique_id=759307448]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21673584, 0.38597178, 0)
 shape = SubResource("BoxShape3D_44au8")
+
+[node name="Control" parent="." index="2" unique_id=496310026]
+speaker_color = Color(0.73002076, 0.76238096, 0.84280765, 1)
+speaker_portrait = ExtResource("3_gsq6j")

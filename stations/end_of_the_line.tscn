@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bjfmopt51mdon" path="res://blender-files/end.glb" id="2_l31fo"]
 [ext_resource type="PackedScene" uid="uid://cjl5d2bfmhj0e" path="res://characters/gate.tscn" id="3_l31fo"]
 
-[node name="Station" unique_id=18370819 instance=ExtResource("1_4kqiw")]
+[node name="Station2" unique_id=18370819 instance=ExtResource("1_4kqiw")]
 
 [node name="Camera3D" parent="." index="0" unique_id=1824744721]
 transform = Transform3D(-0.15627927, 0, -0.9877129, 0, 1, 0, 0.9877129, 0, -0.15627927, -6.7511477, 1.3055134, -5.239232)
 
 [node name="end" parent="." index="4" unique_id=2045727505 instance=ExtResource("2_l31fo")]
 
-[node name="Character" parent="." index="5" unique_id=986362808 instance=ExtResource("3_l31fo")]
+[node name="Gate" parent="." index="5" unique_id=986362808 instance=ExtResource("3_l31fo")]
 transform = Transform3D(-7.921373e-08, 0, 1.0015876, 0, 1.7570581, 0, -1.8121989, 0, -4.3780787e-08, 8.461, 2.527, -5.562)
