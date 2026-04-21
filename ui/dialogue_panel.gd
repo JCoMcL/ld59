@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 func clear():
 	for c in timeline.get_children():
 		c.free()
+	visible = false
 
 func set_speaker_portrait(tex:Texture2D):
 	if not tex:
