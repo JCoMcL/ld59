@@ -12,7 +12,7 @@ func open_dialogue():
 	await p.add_description_box(
 "His oblique is covered in all manner of gems and jewels he probably acquired by performing a merit of a questionable character."
 	).done_showing
-	await p.add_speech_box("Tim Buttlerkson, at your service, kind sir!").done_showing
+	await p.add_speech_box("Welcome to King's Cross Station, kind sir! Tim Buttlerkson, at your service.").done_showing
 	await p.add_description_box(
 "He speaks so quickly, his sentences feel like single words."
 	).done_showing
@@ -22,13 +22,37 @@ func open_dialogue():
 	).done_showing
 
 	var answer = await p.add_question_box({
-		"1": "...And good day to you, sir. To whom do I owe such an honor?"
+		"1": "...And good day to you, sir. To whom do I owe such an honor?",
+		"2": "This isn't King's Cross, sir."
 	})	
 
-	await p.add_speech_box("Why, of course, as I already mentioned, I am Tim Buttlerkson, an entrepreneur from Royal Pleasure Services!").done_showing
-	await p.add_description_box(
+	if answer == "1":
+		await p.add_speech_box("Why, of course, as I already mentioned, I am Tim Buttlerkson, an entrepreneur from Royal Pleasure Services!").done_showing
+		await p.add_description_box(
 "He actually did already mention his name. Not just your muscles, but your memory can't outpace this behemoth of capital."
-	).done_showing
+		).done_showing
+	else:
+		await p.add_speech_box("But why not? Are you imagining some other King's Cross? in some faraway place?").done_showing
+		await p.add_description_box(
+"His eyes dart around, as if in search of something to distract you from the thought"
+		).done_showing
+		await p.add_speech_box("The Signal shows a crown, or perhaps it's a castle. Either way - very regal. And as for the \"Cross\", part, well...").done_showing
+		answer = await p.add_question_box({
+			"1": "Signal...?",
+			"2": "[say nothing]"
+		})
+		if answer == "1":
+			await p.add_speech_box("Goodness, you must be blind").done_showing
+			await p.add_description_box(
+	"A thin hand reaches up to slap his forehead"
+			).done_showing
+			await p.add_speech_box("The [i]Signals[/i], they point the way to the next station.").done_showing
+			await p.add_speech_box("This line you're on, I call it [i]The Circular[/i]").done_showing
+			await p.add_description_box(
+	"a ghostly finger draw circles in the air"
+			).done_showing
+			await p.add_speech_box("You go round and round... and round. Pay attention to the Signal next time, I'm sure you'll agree on my nomenclature!").done_showing
+
 	await p.add_speech_box("May I interest you in purchasing some luxurious premium metal? I am talking about PURE, HIGH-CARAT, and SACRAMENT G-O-L-D!").done_showing
 	await p.add_description_box(
 "You try to open your mouth, but the flood of words and epithets crushes any initiative you attempt to preserve."
