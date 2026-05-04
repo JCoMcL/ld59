@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buhlmchserwp4"
+path="res://.godot/imported/nowhere station soundtrack.ogg-a6f6b350909a564d4df350d25eca5d32.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/nowhere station soundtrack.ogg"
+dest_files=["res://.godot/imported/nowhere station soundtrack.ogg-a6f6b350909a564d4df350d25eca5d32.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,6 +4,7 @@
 
 *.png~
 *.kra~
+*.kra-autosave.kra
 *.blend1
 *.exr
 export
