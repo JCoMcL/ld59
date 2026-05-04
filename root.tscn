@@ -10,6 +10,7 @@
 [ext_resource type="Shader" uid="uid://co6kvvgykv4av" path="res://curtain.gdshader" id="7_vyht1"]
 [ext_resource type="AudioStream" uid="uid://dgtr8llofy4lk" path="res://audio/prelim_soundtrack.ogg" id="10_tw3kd"]
 [ext_resource type="Script" uid="uid://bt6uh0amcq3n4" path="res://fade_in.gd" id="11_gd4vy"]
+[ext_resource type="Texture2D" uid="uid://c3hen3gibls3v" path="res://cursor.png" id="11_qw60f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bf3um"]
 shader = ExtResource("7_vyht1")
@@ -85,3 +86,13 @@ stream = ExtResource("10_tw3kd")
 autoplay = true
 bus = &"Music"
 script = ExtResource("11_gd4vy")
+
+[node name="Cursor" type="TextureRect" parent="." unique_id=1490264709]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 531.0
+offset_top = 271.0
+offset_right = 595.0
+offset_bottom = 335.0
+mouse_filter = 2
+texture = ExtResource("11_qw60f")
